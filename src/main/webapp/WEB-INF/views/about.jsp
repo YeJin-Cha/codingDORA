@@ -23,7 +23,7 @@
 
         <title>:: avana LLC ::</title>
 
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
 
 
 
@@ -71,7 +71,7 @@
 
                     	<h1>
 
-                        	<a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="index.html" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
 
                         </h1>
 
@@ -83,13 +83,13 @@
 
                         <ul>
 
-                            <li class="nav-active"><a href="index.jsp" title="Work">Work</a></li>
+                            <li class="nav-active"><a href="index.html" title="Work">Work</a></li>
 
-                            <li><a href="about.jsp" title="About">About</a></li>
+                            <li><a href="about.html" title="About">About</a></li>
 
-                            <li><a href="blog.jsp" title="Blog">Blog</a></li>
+                            <li><a href="blog.html" title="Blog">Blog</a></li>
 
-                            <li><a href="contact.jsp" title="Contact">Contact</a></li>
+                            <li><a href="contact.html" title="Contact">Contact</a></li>
 
                         </ul>
 
@@ -143,7 +143,7 @@
 
 							<p>Personal Brand Identity.</p>
 
-							<a href="works-details.jsp">View more</a>
+							<a href="works-details.html">View more</a>
 
                         </figcaption>
 
@@ -175,7 +175,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                    <a href="works-details.jsp">View more</a>
+                                    <a href="works-details.html">View more</a>
 
                                 
 
@@ -199,7 +199,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -219,7 +219,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -239,7 +239,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -259,7 +259,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -279,7 +279,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -299,7 +299,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -319,7 +319,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -349,7 +349,7 @@
 
                                 <p>Galerie Anatome based in Paris</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -369,7 +369,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -389,7 +389,7 @@
 
                                 <p>Galerie Anatome based in Paris</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -409,7 +409,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -429,7 +429,7 @@
 
                                 <p>Galerie Anatome based in Paris</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -449,7 +449,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -469,7 +469,7 @@
 
                                 <p>Galerie Anatome based in Paris</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -489,7 +489,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.jsp">View more</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -517,7 +517,7 @@
 
                 <h1>
 
-                    <a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="index.html" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
 
                 </h1>
 
@@ -529,13 +529,13 @@
 
             	<ul>
 
-                	<li><a href="index.jsp" title="Work">Work</a></li>
+                	<li><a href="index.html" title="Work">Work</a></li>
 
-                    <li><a href="about.jsp" title="About">About</a></li>
+                    <li><a href="about.html" title="About">About</a></li>
 
-                    <li><a href="blog.jsp" title="Blog">Blog</a></li>
+                    <li><a href="blog.html" title="Blog">Blog</a></li>
 
-                    <li><a href="contact.jsp" title="Contact">Contact</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
 
                 </ul>
 
