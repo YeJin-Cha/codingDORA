@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원정보 처리 SQL -->
+<mapper namespace="test.org.eth.mapper.UsersMapper">
+	<insert id="insertUsers" parameterType="Users">
+		insert into Users(
+			id
+			,pw
+			,name
+		)values(
+			#{id}
+			,#{pw}
+			,#{name}
+		)
+	</insert>
+
+	<!-- <select id="selectUsers" parameterType="String" resultType="Users">
+		select * from Users where id = #{id}
+	</select>
+	
+	<update id="permitUsers" parameterType="Users">
+		update Users
+			set
+		permit = "Y"
+			where
+		id = #{id}
+	</update>
+	
+	<update id="updateUsers" parameterType="Users">
+		update Users
+			set
+		id=#{id},
+		pw=#{pw},
+		phone=#{phone}
+			where
+		id=#{id}	
+	</update> -->
+</mapper>
