@@ -106,7 +106,7 @@
 
 .grid figure figcaption > a {
 
-	z-index: 1000;
+	z-index: 0;
 
 	text-indent: 200%;
 
