@@ -10,97 +10,52 @@
     <head>
 
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
         <meta charset="utf-8">
-
         <!-- Description, Keywords and Author -->
-
         <meta name="description" content="">
-
         <meta name="author" content="">
+        <title>::codingDARA funding::</title>
 
-        
-
-        <title>:: avana LLC ::</title>
-
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-
+		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
 
         <!-- style -->
-
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
-
         <!-- style -->
 
         <!-- bootstrap -->
-
         <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
         <!-- responsive -->
-
         <link href="resources/css/responsive.css" rel="stylesheet" type="text/css">
-
         <!-- font-awesome -->
-
         <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <!-- font-awesome -->
-
+        <!-- effects -->
         <link href="resources/css/effects/set2.css" rel="stylesheet" type="text/css">
-
         <link href="resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
-
         <link href="resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
-
 	</head>
 
 
 
     <body>
-
-    
-
     	<!-- header -->
-
         	<header role="header">
-
             	<div class="container">
-
                 	<!-- logo -->
-
                     	<h1>
-
-                        	<a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
-
+                        	<a href="/" title="codingDARA funding"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
-
                     <!-- logo -->
-
                     <!-- nav -->
-
                     <nav role="header-nav" class="navy">
-
                         <ul>
-
-                            <li class="nav-active"><a href="index.jsp" title="Work">Work</a></li>
-
-                            <li><a href="about.jsp" title="About">About</a></li>
-
-                            <li><a href="blog.jsp" title="Blog">Blog</a></li>
-
-                            <li><a href="contact.jsp" title="Contact">Contact</a></li>
-
+                            <li class="nav-active"><a href="my/profile" title="My profile">My profile</a></li>
+                            <li><a href="my/fundingList" title="My FundingList">My FundingList</a></li>
+                            <li><a href="my/logout" title="logout">Logout</a></li>
                         </ul>
-
                     </nav>
-
                     <!-- nav -->
-
                 </div>
-
             </header>
-
         <!-- header -->
 
         <!-- main -->
