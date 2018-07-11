@@ -11,13 +11,15 @@ public class DonationVO {
 	private String d_effect;
 	private String d_goalMoney;
 	private String d_totalMoney;
+	private String d_targetWallet;
 	private String d_term;
 	private String d_images;
 	
 	public DonationVO() {}
 
 	public DonationVO(int d_num, String userid, String d_name, String d_content, String d_introduce, String d_plan,
-			String d_target, String d_effect, String d_goalMoney, String d_totalMoney, String d_term, String d_images) {
+			String d_target, String d_effect, String d_goalMoney, String d_totalMoney, String d_targetWallet,
+			String d_term, String d_images) {
 		super();
 		this.d_num = d_num;
 		this.userid = userid;
@@ -29,6 +31,7 @@ public class DonationVO {
 		this.d_effect = d_effect;
 		this.d_goalMoney = d_goalMoney;
 		this.d_totalMoney = d_totalMoney;
+		this.d_targetWallet = d_targetWallet;
 		this.d_term = d_term;
 		this.d_images = d_images;
 	}
@@ -113,6 +116,14 @@ public class DonationVO {
 		this.d_totalMoney = d_totalMoney;
 	}
 
+	public String getD_targetWallet() {
+		return d_targetWallet;
+	}
+
+	public void setD_targetWallet(String d_targetWallet) {
+		this.d_targetWallet = d_targetWallet;
+	}
+
 	public String getD_term() {
 		return d_term;
 	}
@@ -133,8 +144,8 @@ public class DonationVO {
 	public String toString() {
 		return "DonationVO [d_num=" + d_num + ", userid=" + userid + ", d_name=" + d_name + ", d_content=" + d_content
 				+ ", d_introduce=" + d_introduce + ", d_plan=" + d_plan + ", d_target=" + d_target + ", d_effect="
-				+ d_effect + ", d_goalMoney=" + d_goalMoney + ", d_totalMoney=" + d_totalMoney + ", d_term=" + d_term
-				+ ", d_images=" + d_images + "]";
+				+ d_effect + ", d_goalMoney=" + d_goalMoney + ", d_totalMoney=" + d_totalMoney + ", d_targetWallet="
+				+ d_targetWallet + ", d_term=" + d_term + ", d_images=" + d_images + "]";
 	}
-	
+
 }

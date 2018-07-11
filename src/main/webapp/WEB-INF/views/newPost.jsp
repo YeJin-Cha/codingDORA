@@ -10,15 +10,46 @@
 <title>:: codingDORA | New Post ::</title>
 </head>
 <body>
-
+<!--
+   d_num - 필요없음
+   userid - 필요없음
+   
+   d_name - 제목
+   
+   d_content - 내용
+   
+   d_introduce - 
+   
+   d_plan - 기부금 사용 금액
+   
+   d_target - 사람, 동물 등
+   
+   d_effect - 사업대상 및 기대효과
+   
+   d_goalMoney - 모금 금액
+   
+   d_totalMoney - 필요없음
+   
+   d_term - 기간
+   
+   d_images - 이미지 등록
+   
+-->
 <div id="form" class="form-wrapper">
   <label class="text">
-    <span>Text and Values</span>
+    <span>제목</span>
     <div class="input-wrapper">
       <input type="text" /> 
     </div>
   </label>
 
+  <label class="text">
+    <span>내용</span>
+    <div class="input-wrapper">
+      <textarea></textarea> 
+    </div>
+  </label>
+  
   <label class="dropdown">
     <span>Dropdown</span>
     <div class="input-wrapper">
@@ -42,12 +73,6 @@
     </div>
   </label>
   
-  <label class="text">
-    <span>Some more information and also a label with a lot of text. So resize your browser and see whats happening...</span>
-    <div class="input-wrapper">
-      <textarea>Write, some text here  </textarea> 
-    </div>
-  </label>
   
   <fieldset class="radio-check-label">
     <span class="label">Do you like this?</span>

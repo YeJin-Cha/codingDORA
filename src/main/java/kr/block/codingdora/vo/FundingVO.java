@@ -11,13 +11,15 @@ public class FundingVO {
 	private String f_effect;
 	private String f_goalMoney;
 	private String f_totalMoney;
+	private String f_targetWallet;
 	private String f_term;
 	private String f_images;
 
 	public FundingVO() {}
 
 	public FundingVO(int f_num, String userid, String f_name, String f_content, String f_introduce, String f_plan,
-			String f_target, String f_effect, String f_goalMoney, String f_totalMoney, String f_term, String f_images) {
+			String f_target, String f_effect, String f_goalMoney, String f_totalMoney, String f_targetWallet,
+			String f_term, String f_images) {
 		super();
 		this.f_num = f_num;
 		this.userid = userid;
@@ -29,6 +31,7 @@ public class FundingVO {
 		this.f_effect = f_effect;
 		this.f_goalMoney = f_goalMoney;
 		this.f_totalMoney = f_totalMoney;
+		this.f_targetWallet = f_targetWallet;
 		this.f_term = f_term;
 		this.f_images = f_images;
 	}
@@ -113,6 +116,14 @@ public class FundingVO {
 		this.f_totalMoney = f_totalMoney;
 	}
 
+	public String getF_targetWallet() {
+		return f_targetWallet;
+	}
+
+	public void setF_targetWallet(String f_targetWallet) {
+		this.f_targetWallet = f_targetWallet;
+	}
+
 	public String getF_term() {
 		return f_term;
 	}
@@ -133,8 +144,9 @@ public class FundingVO {
 	public String toString() {
 		return "FundingVO [f_num=" + f_num + ", userid=" + userid + ", f_name=" + f_name + ", f_content=" + f_content
 				+ ", f_introduce=" + f_introduce + ", f_plan=" + f_plan + ", f_target=" + f_target + ", f_effect="
-				+ f_effect + ", f_goalMoney=" + f_goalMoney + ", f_totalMoney=" + f_totalMoney + ", f_term=" + f_term
-				+ ", f_images=" + f_images + "]";
+				+ f_effect + ", f_goalMoney=" + f_goalMoney + ", f_totalMoney=" + f_totalMoney + ", f_targetWallet="
+				+ f_targetWallet + ", f_term=" + f_term + ", f_images=" + f_images + "]";
 	}
+
 	
 }
