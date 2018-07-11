@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import kr.block.codingdora.dao.UsersDAO;
-import kr.block.codingdora.vo.Users;
+import kr.block.codingdora.dao.UserDAO;
+import kr.block.codingdora.vo.UserVO;
 
 @Controller
 @RequestMapping(value = "my")
@@ -25,7 +25,7 @@ public class MyController {
 	private static final Logger logger = LoggerFactory.getLogger(MyController.class);
 	
 	@Autowired
-	UsersDAO usersDAO;
+	UserDAO userDAO;
 	
 	@RequestMapping(value = "profile", method = RequestMethod.GET)
 	public String profile(){
@@ -50,19 +50,19 @@ public class MyController {
 		return "newPost";
 	}
 
-	@RequestMapping(value="/insertUsers",method=RequestMethod.POST)
-	   @ResponseBody
-	   public void insertUsers(Users users, String id) throws MessagingException, UnsupportedEncodingException{
-	      usersDAO.insertUsers(users);
-	      System.out.println(id);
+		@RequestMapping(value="/insertUser",method=RequestMethod.POST)
+	   public String insertUser(UserVO userVO) throws MessagingException, UnsupportedEncodingException{
+	      userDAO.insertUser(userVO);
+	      System.out.println(userVO.getUseremail());
 	      String title = "GURUME365 ";
 	      MailHandler sendMail = new MailHandler(mailSender);
 	      sendMail.setSubject(title);
 	      sendMail.setText(new StringBuffer().append("<h1>메일 인증</h1>")
-	            .append("<a href='https://localhost:8888/gurume365/join/permit?id='"+id)
+	            .append("<a href='https://localhost:8888/gurume365/join/permit?id='")
 	            .append("' target='_blank'>이메일 인증 확인</a>").toString());
 	      sendMail.setFrom("gurume365", title);
-	      sendMail.setTo(id);
+	      sendMail.setTo(userVO.getUseremail());
 	      sendMail.send();
+	      return "home";
 	}
 }

@@ -8,9 +8,9 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-		<typeAlias type="kr.block.codingdora.vo.Users" alias="Users"/>
+		<typeAlias type="kr.block.codingdora.vo.UserVO" alias="UserVO"/>
 	</typeAliases>
     <mappers>
-    	<mapper resource="usersMapper.xml"/>
+    	<mapper resource="userMapper.xml"/>
     </mappers>
 </configuration>

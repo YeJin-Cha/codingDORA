@@ -1,0 +1,7 @@
+package kr.block.codingdora.mapper;
+
+import kr.block.codingdora.vo.UserVO;
+
+public interface UserMapper {
+	public void insertUser(UserVO userVO);
+}

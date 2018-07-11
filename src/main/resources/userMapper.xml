@@ -4,16 +4,18 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 회원정보 처리 SQL -->
-<mapper namespace="test.org.eth.mapper.UsersMapper">
-	<insert id="insertUsers" parameterType="Users">
-		insert into Users(
-			id
-			,pw
-			,name
+<mapper namespace="kr.block.codingdora.mapper.UserMapper">
+	<insert id="insertUser" parameterType="UserVO">
+		insert into table_user(
+			userid
+			,userpw
+			,username
+			,useremail
 		)values(
-			#{id}
-			,#{pw}
-			,#{name}
+			#{userid}
+			,#{userpw}
+			,#{username}
+			,#{useremail}
 		)
 	</insert>
 
