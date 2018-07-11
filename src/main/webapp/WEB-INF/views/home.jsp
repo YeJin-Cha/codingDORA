@@ -42,13 +42,14 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="/" title="codingDARA funding"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="/" title="codingDARA funding"><img style="width: 150px;" src="resources/images/logo.png" title="codingDORA" alt="codingDORA"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
                     <nav role="header-nav" class="navy">
                         <ul>
                             <li class="nav-active"><a href="my/profile" title="My profile">My profile</a></li>
+                            <li><a href="signUp" title="SignUp">SignUp</a></li>
                             <li><a href="my/fundingList" title="My FundingList">My FundingList</a></li>
                             <li><a href="my/logout" title="logout">Logout</a></li>
                         </ul>
@@ -195,27 +196,17 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
         <script src="resources/js/jquery.min.js" type="text/javascript"></script>
-
         <!-- custom -->
 
 		<script src="resources/js/nav.js" type="text/javascript"></script>
-
         <script src="resources/js/custom.js" type="text/javascript"></script>
-
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-
         <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-
         <script src="resources/js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
-
 		<script src="resources/js/effects/imagesloaded.js"  type="text/javascript"></script>
-
 		<script src="resources/js/effects/classie.js"  type="text/javascript"></script>
-
 		<script src="resources/js/effects/AnimOnScroll.js"  type="text/javascript"></script>
-
         <script src="resources/js/effects/modernizr.custom.js"></script>
-
         <!-- jquery.countdown -->
 
         <script src="resources/js/html5shiv.js" type="text/javascript"></script>
