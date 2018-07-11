@@ -15,12 +15,28 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
+	<!-- 메일보내기 -->
+      <bean id="mailSender" class = "org.springframework.mail.javamail.JavaMailSenderImpl">
+      <property name="host" value="smtp.gmail.com" />
+      <property name="port" value="587" />
+      <property name="username" value="gurume365@gmail.com" />
+      <property name="password" value="gurume365**" />
+      <property name="javaMailProperties">
+         <props>
+               <prop key="mail.transport.protocol">smtp</prop>
+               <prop key="mail.smtp.auth">true</prop>
+               <prop key="mail.smtp.starttls.enable">true</prop>
+               <prop key="mail.debug">true</prop>
+         </props>
+      </property>
+   </bean>
+
 	<!-- MyBatis(Maria DB)와 Spring 연결 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 		<property name="driverClass" value="org.mariadb.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mariadb://localhost:3306/mysql?useSSL=false&amp;serverTimezone=UTC" />
+			value="jdbc:mariadb://203.233.199.38:3306/mysql?useSSL=false&amp;serverTimezone=UTC" />
 		<property name="username" value="root" />
 		<property name="password" value="1234" />
 	</bean>
