@@ -38,13 +38,16 @@ public class MyController {
 		logger.info("fundingList");
 		return "blog";
 	}
-
-	
 	
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout(){
 		logger.info("logout");
 		return "redirect:../";
+	}
+	@RequestMapping(value = "newPost", method = RequestMethod.GET)
+	public String newPost(){
+		logger.info("new Post");
+		return "newPost";
 	}
 
 	@RequestMapping(value="/insertUsers",method=RequestMethod.POST)
