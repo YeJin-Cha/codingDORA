@@ -37,68 +37,79 @@
 -->
 <div id="form" class="form-wrapper">
   <label class="text">
-    <span>제목</span>
+    <span>Title</span>
     <div class="input-wrapper">
-      <input type="text" /> 
+      <input type="text" name ="d_name"> 
+    </div>
+  </label>
+  
+  <label class="text">
+    <span>Introduce</span>
+    <div class="input-wrapper">
+      <textarea name ="d_introduce">your introduce Write here.  </textarea> 
+    </div>
+  </label>
+  
+  <label class="text">
+    <span>Plan</span>
+    <div class="input-wrapper">
+      <textarea name ="d_plan">your plan Write here.</textarea> 
     </div>
   </label>
 
   <label class="text">
-    <span>내용</span>
+    <span>Target</span>
     <div class="input-wrapper">
-      <textarea></textarea> 
+      <input type="text" name ="d_target"> 
     </div>
   </label>
   
-  <label class="dropdown">
-    <span>Dropdown</span>
+  <label class="text">
+    <span>Effect</span>
     <div class="input-wrapper">
-      <select size="1">
+      <input type="text" name ="d_effect"> 
+    </div>
+  </label>
+
+  <label class="dropdown">
+    <span>GoalMoney</span>
+    <div class="input-wrapper">
+      <select size="1" name="goalMoney">
         <option>-- Please choose --</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>    
+        <option value="1">1eth</option>
+        <option value="10">10eth</option>
+        <option value="100">100eth</option>
+        <option value="1000">1000eth</option>    
       </select>
     </div>
   </label>
 
-  <label class="multiple">  
-    <span>Multiple</span>
-    <div class="input-wrapper">
-      <select class="multiple" size="3">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>    
-      </select>  
-    </div>
-  </label>
-  
-  
+
   <fieldset class="radio-check-label">
-    <span class="label">Do you like this?</span>
+    <span class="label">Term</span>
     
     <div class="input-wrapper">
-      <label class="radio" for="yes">
-        <input type="radio" name="foo" value="yes" id="yes"/>
-        <span>Yes, please</span>
+      <label class="radio" for="week">
+        <input type="radio" name="term" value="week" id="week"/>
+        <span>1week</span>
       </label>
     </div>
     
     <div class="input-wrapper">
-      <label class="radio" for="no" >
-        <input type="radio" name="foo" value="no" id="no"/>
-        <span>No, thanks</span>
+      <label class="radio" for="month" >
+        <input type="radio" name="term" value="month" id="month"/>
+        <span>1month</span>
       </label>
     </div>
     
     <div class="input-wrapper">    
-      <label class="radio" for="maybe" for="maybe">
-        <input type="radio" name="foo" value="maybe" id="maybe"/>
-        <span>Well, maybe</span>
+      <label class="radio" for="year">
+        <input type="radio" name="term" value="year" id="year"/>
+        <span>1year</span>
       </label>
     </div>
   </fieldset>
-  
+  <!-- 
   <fieldset class="radio-check-label">
     <span class="label">Please check all</span>
     <div class="input-wrapper">
@@ -124,12 +135,12 @@
     </div>
   </fieldset>
   
-
+ -->
     <input type="submit" name="submit" value="Submit"/>
     <input type="reset" name="reset" value="Reset"/>
 
 <div class="clear"></div>
-<span class="notes">* Is mandetory.</span>
+<span class="notes">* can not update, delete</span>
 </div>  
 
 
