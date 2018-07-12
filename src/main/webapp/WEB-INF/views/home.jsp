@@ -49,6 +49,9 @@
                     <nav role="header-nav" class="navy">
                         <ul>
                             <li><a href="my/fundingList" title="My FundingList">My FundingList</a></li>
+                           <!-- 임시 페이지 이동 -->
+                           <li><a href="postdetail" title="PostDetail">PostDetail</a></li>
+                           <!-- /임시 페이지 이동 -->
                             <c:if test="${userId != null}">
                             <li><a href="my/profile" title="My profile">My profile</a></li>
                             <li><a href="my/newPost" title="newPost">new Posting</a></li>

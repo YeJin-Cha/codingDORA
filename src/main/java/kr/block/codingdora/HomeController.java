@@ -36,4 +36,10 @@ public class HomeController {
 		return "signUp";
 	}
 	
+	// 임시 페이지 이동
+	@RequestMapping(value = "postdetail" , method = RequestMethod.GET)
+	public String postdetail(){
+		return "about";
+	}
+	
 }
