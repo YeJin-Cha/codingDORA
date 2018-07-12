@@ -14,16 +14,30 @@ public class UserDAO {
 	SqlSession sqlSession;
 	
 	public void insertUser(UserVO userVO){
-		UserMapper usersMapper = sqlSession.getMapper(UserMapper.class);
+		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 		try{
-			usersMapper.insertUser(userVO);
+			userMapper.insertUser(userVO);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	public UserVO selectUser(String username) {
-		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-		return mapper.selectUser(username);
+	public UserVO selectUser(String userid){
+		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+		UserVO userVO = null;
+		try{
+			userVO = userMapper.selectUser(userid);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return userVO;
+	}
+	public void permitUser(UserVO userVO){
+		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+		try{
+			userMapper.permitUser(userVO);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

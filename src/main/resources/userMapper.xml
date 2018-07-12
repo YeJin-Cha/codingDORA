@@ -20,19 +20,10 @@
 	</insert>
 
 	<select id="selectUser" parameterType="String" resultType="UserVO">
-		select * from table_user where userid = #{username}
+		select * from table_User where userid = #{userid}
 	</select>
 	
-	<!-- 
-	<update id="permitUsers" parameterType="Users">
-		update Users
-			set
-		permit = "Y"
-			where
-		id = #{id}
-	</update>
-	
-	<update id="updateUsers" parameterType="Users">
+	<!-- <update id="updateUsers" parameterType="Users">
 		update Users
 			set
 		id=#{id},
@@ -41,4 +32,15 @@
 			where
 		id=#{id}	
 	</update> -->
+	
+	<update id="permitUser" parameterType="UserVO">
+		update table_user
+			set
+		userpermit = "Y"
+			where
+		userid = #{userid}
+	</update>
+
+	
+	
 </mapper>

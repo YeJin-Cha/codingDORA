@@ -64,21 +64,33 @@ public class MyController {
 		return "testDetails";
 	}
 
-	@RequestMapping(value="/insertUser",method=RequestMethod.POST)
-	public String insertUser(UserVO userVO) throws MessagingException, UnsupportedEncodingException{
-    	userDAO.insertUser(userVO);
-    	System.out.println(userVO.getUseremail());
-    	String title = "GURUME365 ";
-    	MailHandler sendMail = new MailHandler(mailSender);
-    	sendMail.setSubject(title);
-    	sendMail.setText(new StringBuffer().append("<h1>메일 인증</h1>")
-            .append("<a href='https://localhost:8888/gurume365/join/permit?id='")
-            .append("' target='_blank'>이메일 인증 확인</a>").toString());
-    	sendMail.setFrom("gurume365", title);
-    	sendMail.setTo(userVO.getUseremail());
-    	sendMail.send();
-    	return "home";
+	@RequestMapping(value = "/insertUser", method = RequestMethod.POST)
+	public String insertUser(UserVO userVO) throws MessagingException, UnsupportedEncodingException {
+		userDAO.insertUser(userVO);
+		System.out.println(userVO.getUseremail());
+		String title = "GURUME365 ";
+		MailHandler sendMail = new MailHandler(mailSender);
+		sendMail.setSubject(title);
+		sendMail.setText(new StringBuffer().append("<h1>메일 인증</h1>")
+				.append("<a href='https://localhost:8888/codingdora/my/permit?id='" + userVO.getUserid())
+				.append("' target='_blank'>이메일 인증 확인</a>").toString());
+		sendMail.setFrom("gurume365", title);
+		sendMail.setTo(userVO.getUseremail());
+		sendMail.send();
+		return "home";
 	}
+
+	
+	@RequestMapping(value = "permit", method = RequestMethod.GET)
+	public String permit(String userid) {
+		logger.info("permit");
+		UserVO userVO = userDAO.selectUser(userid);
+		if(userVO.getUserpermit().equals("N")&&userVO != null){
+			userDAO.permitUser(userVO);
+		}
+		return "home";
+	}
+
 	
 	@ResponseBody
 	@RequestMapping(value = "/selectUser", method=RequestMethod.POST)
@@ -103,4 +115,7 @@ public class MyController {
 		
 		return "0";
 	}
+	
+	
+	
 }
