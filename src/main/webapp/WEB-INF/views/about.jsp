@@ -24,6 +24,28 @@
         <!-- font-awesome -->
         <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
+        <style type="text/css">
+.rate-bar {
+  position: relative;
+  width: 90%;
+  background-color: #fff;
+  vertical-align: middle;
+    height: 10px;
+  display: inline-block;
+}
+.rate-bar span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tomato;
+  transition: 1s;
+  width: 0;
+  transition: .4s;
+    height: 10px;
+  display: inline-block;
+}
+        
+        </style>
 	</head>
     <body>
     	<!-- header -->
@@ -53,15 +75,27 @@
             	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
                 	<article role="pge-title-content">
                     	<header>
-                        	<h2><span>We Do</span> What we love to do.</h2>
+                        	<h2><span>Main Title</span>sub title</h2>
                         </header>
-                        <p>Over 40,000 customers use our themes to power their websites and we love them.</p>
+                        <p>:: introduce part::</p>
                     </article>
                 </section>
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 	<article class="about-content">
                     	<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc, fiant sollemnes in futurum.</p>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consueum formas humanitatis per seacula quarta deciEodem modo tythepi, qui nunc, fiant sollemnes in futurum.</p>
+                        <p class="rate-one">
+     						<span class="rate-bar">
+        						<span class="rate-bar-value"></span>
+    						</span>
+    						10
+  						</p>
+
+  						<p class="rate-two">
+     						<span class="rate-bar">
+        						<span class="rate-bar-value"></span>
+    						</span>
+    						5.5
+  						</p>
                     </article>
                 </section>
                 
@@ -218,5 +252,14 @@
         <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- jquery.countdown -->
         <script src="resources/js/html5shiv.js" type="text/javascript"></script>
+    	
+    	<script type="text/javascript">
+    	var val_one = $( ".rate-one" ).text() * (10) + '%';
+    	var val_two = $( ".rate-two" ).text() * (10) + '%';
+
+    	$( '.rate-one .rate-bar-value' ).css( "width", val_one);
+    	$( '.rate-two .rate-bar-value' ).css( "width", val_two);
+
+    	</script>
     </body>
 </html>
