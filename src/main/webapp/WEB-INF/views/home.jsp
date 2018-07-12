@@ -48,15 +48,15 @@
                     <!-- nav -->
                     <nav role="header-nav" class="navy">
                         <ul>
-                            <li class="nav-active"><a href="my/profile" title="My profile">My profile</a></li>
-                            <li><a href="signUp" title="SignUp">SignUp</a></li>
-                            <li><a href="my/newPost" title="newPost">new Posting</a></li>
                             <li><a href="my/fundingList" title="My FundingList">My FundingList</a></li>
-                            
                             <c:if test="${userId != null}">
+                            <li><a href="my/profile" title="My profile">My profile</a></li>
+                            <li><a href="my/newPost" title="newPost">new Posting</a></li>
 	                            <li><a href="my/logout" title="logout">Logout</a></li>
 							</c:if>
-                            
+                            <c:if test="${userId == null}">
+	                            <li><a href="signUp" title="SignUp">SignUp</a></li>
+							</c:if>                            
                         </ul>
                     </nav>
                     <!-- nav -->
@@ -115,8 +115,6 @@
                     </ul>
                 </section>
 
-                
-
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
                 	<ul class="grid-lod effect-2" id="grid">
                     	<li>
@@ -141,6 +139,22 @@
                         </li>
                     </ul>
                 </section>
+                
+				<c:forEach var="donation" items="${donationList}">
+					${donation.d_num}
+					${donation.userid}
+					${donation.d_name}
+					${donation.d_content}
+					${donation.d_introduce}
+					${donation.d_target}
+					${donation.d_effect}
+					${donation.d_goalMoney}
+					${donation.d_totalMoney}
+					${donation.d_targetWallet}
+					${donation.d_term}
+					${donation.d_images}
+				</c:forEach>
+				
                 <div class="clearfix"></div>
             </div>
         </main>

@@ -55,7 +55,7 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="kr.block.codingdora" />
     </bean>
-    
+     
     <bean id="transactionManager" 
     	class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
