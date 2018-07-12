@@ -6,17 +6,19 @@ public class UserVO  {
 	private String userpw;
 	private String username;
 	private String useremail;
+	private String userpermit;
 	
 	public UserVO() {
 		super();
 	}
 
-	public UserVO(String userid, String userpw, String username, String useremail) {
+	public UserVO(String userid, String userpw, String username, String useremail, String userpermit) {
 		super();
 		this.userid = userid;
 		this.userpw = userpw;
 		this.username = username;
 		this.useremail = useremail;
+		this.userpermit = userpermit;
 	}
 
 	public String getUserid() {
@@ -50,10 +52,17 @@ public class UserVO  {
 	public void setUseremail(String useremail) {
 		this.useremail = useremail;
 	}
+	public String getUserpermit() {
+		return userpermit;
+	}
+
+	public void setUserpermit(String userpermit) {
+		this.userpermit = userpermit;
+	}
 
 	@Override
 	public String toString() {
 		return "UserVO [userid=" + userid + ", userpw=" + userpw + ", username=" + username + ", useremail=" + useremail
-				+ "]";
+				+ ", userpermit=" + userpermit+"]";
 	}
 }
