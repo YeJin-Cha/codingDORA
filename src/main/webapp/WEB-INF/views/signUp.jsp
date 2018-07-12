@@ -7,9 +7,66 @@
 <link href="resources/css/signUp.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>:: CodingDORA | SignUp ::</title>
+
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function () {
+   	$('#btn-signin').on('click', checkLoginForm);
+});
+
+function checkLoginForm() {
+	var id = $('#username').val();
+	var password = $('#password').val();
+	if (id == '') {
+		$('.login-box #id').css('margin-bottom', '0px');
+		$('.login-box #password').css('margin-bottom', '20px');
+		$('#id_err').html('아이디를 입력해주세요.');
+		$('#id_err').css('color', 'red');
+		$('#id_err').show();
+		$('#pwd_err').hide();
+		$('#login_err').hide();
+		
+		return false;
+	}
+	
+	if (password == '') {
+		$('.login-box #password').css('margin-bottom', '0px');
+		$('.login-box #id').css('margin-bottom', '20px');
+		$('#pwd_err').html('비밀번호를 입력해주세요.');
+		$('#pwd_err').css('color', 'red');
+		$('#pwd_err').show();
+		$('#id_err').hide();
+		$('#login_err').hide();
+		
+		return false;
+	}
+	
+ 	$.ajax({
+		url: 'my/selectUser',
+		type: 'post',
+		data: {username: id, password: password},
+		datatype: 'text',
+		success: function(isCorrect) {
+			if (isCorrect == 1) {
+				location.href = "/codingdora";
+			} else {
+				$('.login-box #id').css('margin-bottom', '20px');
+				$('.login-box #password').css('margin-bottom', '0px');
+				$('#login_err').html('아이디 또는 비밀번호를 다시 확인하세요.');
+				$('#login_err').css('color', 'red');
+				$('#login_err').show();
+				$('#id_err').hide();
+				$('#pwd_err').hide();
+			}
+		},
+		error: function (e) {
+			alert('로그인 실패');
+		}
+	});
+}
+</script>
 </head>
 <body>
-<!--  -->
 <div class="container">
   <div class="frame">
     <div class="nav">
@@ -20,20 +77,25 @@
     </div>
     <div ng-app ng-init="checked = false">
     
-		<form class="form-signin" action="" method="post" name="form">
+		<form class="form-signin" >
         
           <label for="username">Username</label>
-          	<input class="form-styling" type="text" name="username" placeholder=""/>
+          	<input class="form-styling" type="text" id="username" name="username" placeholder=""/>
           <label for="password">Password</label>
-          	<input class="form-styling" type="text" name="password" placeholder=""/>
+          	<input class="form-styling" type="text" id="password" name="password" placeholder=""/>
           	<input type="checkbox" id="checkbox"/>
           <label for="checkbox" ><span class="ui"></span>Keep me signed in</label>
           
           <div class="btn-animate">
-            <a class="btn-signin">Sign in</a>
+            <a class="btn-signin" id="btn-signin">Sign in</a>
+            
+			<span id="id_err"></span><br/>
+			<span id="pwd_err"></span><br/>
+			<span id="login_err"></span><br/>
           </div>
           
         </form>
+       
        
         <form class="form-signup" action="my/insertUser" method="post" name="form">
         
@@ -89,7 +151,7 @@
         	});
         });
 
-        $(function() {
+/*         $(function() {
         	$(".btn-signin").click(function() {
           $(".btn-animate").toggleClass("btn-animate-grow");
           $(".welcome").toggleClass("welcome-left");
@@ -99,6 +161,6 @@
           $(".btn-goback").toggleClass("btn-goback-up");
           $(".forgot").toggleClass("forgot-fade");
         	});
-        });
+        }); */
         </script>
 </html>

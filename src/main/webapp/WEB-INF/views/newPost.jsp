@@ -10,31 +10,6 @@
 <title>:: codingDORA | New Post ::</title>
 </head>
 <body>
-<!--
-   d_num - 필요없음
-   userid - 필요없음
-   
-   d_name - 제목
-   
-   d_content - 내용
-   
-   d_introduce - 
-   
-   d_plan - 기부금 사용 금액
-   
-   d_target - 사람, 동물 등
-   
-   d_effect - 사업대상 및 기대효과
-   
-   d_goalMoney - 모금 금액
-   
-   d_totalMoney - 필요없음
-   
-   d_term - 기간
-   
-   d_images - 이미지 등록
-   
--->
 <div id="form" class="form-wrapper">
   <label class="text">
     <span>Title</span>
@@ -46,14 +21,14 @@
   <label class="text">
     <span>Introduce</span>
     <div class="input-wrapper">
-      <textarea name ="d_introduce">your introduce Write here.  </textarea> 
+      <textarea name ="d_introduce" placeholder="your introduce Write here."></textarea> 
     </div>
   </label>
   
   <label class="text">
     <span>Plan</span>
     <div class="input-wrapper">
-      <textarea name ="d_plan">your plan Write here.</textarea> 
+      <textarea name ="d_plan" placeholder="your plan Write here."></textarea> 
     </div>
   </label>
 
@@ -109,40 +84,13 @@
       </label>
     </div>
   </fieldset>
-  <!-- 
-  <fieldset class="radio-check-label">
-    <span class="label">Please check all</span>
-    <div class="input-wrapper">
-      <label class="checkbox" for="accept">
-        <input type="checkbox" name="accept" id="accept"/>
-        <span>Okay, I accept all u want</span>
-      </label>
-    </div>
-    
-    <div class="input-wrapper">
-      <label class="checkbox" for="spam" >
-        <input type="checkbox" name="spam" id="spam"/>
-        <span>Yes, send me all your spam.</span>
-      </label>
-    </div>
-    
-    <div class="input-wrapper">  
-      <label class="checkbox" for="toolbars" >
-        <input type="checkbox" name="toolbars" id="toolbars"/>
-        <span>Install 1000 toolbars and add all available plugins to my browser</span>
-      </label>
-
-    </div>
-  </fieldset>
   
- -->
     <input type="submit" name="submit" value="Submit"/>
     <input type="reset" name="reset" value="Reset"/>
 
 <div class="clear"></div>
 <span class="notes">* can not update, delete</span>
 </div>  
-
 
 
 </body>

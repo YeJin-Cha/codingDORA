@@ -9,7 +9,7 @@ import kr.block.codingdora.vo.UserVO;
 
 @Repository
 public class UserDAO {
-	//
+
 	@Autowired
 	SqlSession sqlSession;
 	
@@ -20,5 +20,10 @@ public class UserDAO {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	public UserVO selectUser(String username) {
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+		return mapper.selectUser(username);
 	}
 }

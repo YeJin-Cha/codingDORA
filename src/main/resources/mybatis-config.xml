@@ -9,6 +9,7 @@
     </settings>
     <typeAliases>
 		<typeAlias type="kr.block.codingdora.vo.UserVO" alias="UserVO"/>
+		<typeAlias type="kr.block.codingdora.vo.DonationVO" alias="DonationVO"/>
 	</typeAliases>
     <mappers>
     	<mapper resource="userMapper.xml"/>

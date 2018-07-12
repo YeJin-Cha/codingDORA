@@ -52,7 +52,11 @@
                             <li><a href="signUp" title="SignUp">SignUp</a></li>
                             <li><a href="my/newPost" title="newPost">new Posting</a></li>
                             <li><a href="my/fundingList" title="My FundingList">My FundingList</a></li>
-                            <li><a href="my/logout" title="logout">Logout</a></li>
+                            
+                            <c:if test="${userId != null}">
+	                            <li><a href="my/logout" title="logout">Logout</a></li>
+							</c:if>
+                            
                         </ul>
                     </nav>
                     <!-- nav -->
