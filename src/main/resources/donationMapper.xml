@@ -40,4 +40,11 @@
 		)
 	</insert>
 	
+	<select id="selectPost" parameterType="int" resultType="DonationVO">
+		select * from table_donation where d_num = #{d_num}
+	</select>
+	
+	<select id="selectComment" parameterType="int" resultType="D_commVO">
+		select * from table_d_comm where d_num = #{d_num}
+	</select>
 </mapper>

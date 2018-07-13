@@ -101,10 +101,9 @@
 	                            <figcaption>
 	                                    <h2>${post.d_name}</h2>
 	                                    <p>${post.d_totalMoney}</p>
-	                                    <p>${post.d_totalMoney}</p>
 	                                    <p>${post.d_goalMoney}</p>
 	                                    <p>${post.d_term}</p>
-	                                    <a href="works-details.jsp">View more</a>
+	                                    <a href="postdetail?d_num=${post.d_num}">View more</a>
 	                            </figcaption>
 	                        </figure>
 	                        </li>
@@ -117,10 +116,9 @@
 		                            <figcaption>
 		                                    <h2>${nextVal.d_name}</h2>
 		                                    <p>${nextVal.d_totalMoney}</p>
-		                                    <p>${nextVal.d_totalMoney}</p>
 		                                    <p>${nextVal.d_goalMoney}</p>
 		                                    <p>${nextVal.d_term}</p>
-		                                <a href="works-details.jsp">View more</a>
+		                                <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 		                            </figcaption>
 		                        </figure>
 		                        </li>
@@ -143,10 +141,9 @@
 	                            <figcaption>
 	                                    <h2>${nextVal.d_name}</h2>
 	                                    <p>${nextVal.d_totalMoney}</p>
-	                                    <p>${nextVal.d_totalMoney}</p>
 	                                    <p>${nextVal.d_goalMoney}</p>
 	                                    <p>${nextVal.d_term}</p>
-	                                    <a href="works-details.jsp">View more</a>
+	                                    <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 	                            </figcaption>
 	                        </figure>
 	                        </li>
@@ -159,10 +156,9 @@
 		                            <figcaption>
 		                                    <h2>${nextVal.d_name}</h2>
 		                                    <p>${nextVal.d_totalMoney}</p>
-		                                    <p>${nextVal.d_totalMoney}</p>
 		                                    <p>${nextVal.d_goalMoney}</p>
 		                                    <p>${nextVal.d_term}</p>
-		                                <a href="works-details.jsp">View more</a>
+		                                <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 		                            </figcaption>
 		                        </figure>
 		                        </li>

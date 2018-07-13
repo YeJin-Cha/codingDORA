@@ -10,6 +10,7 @@
     <typeAliases>
 		<typeAlias type="kr.block.codingdora.vo.UserVO" alias="UserVO"/>
 		<typeAlias type="kr.block.codingdora.vo.DonationVO" alias="DonationVO"/>
+		<typeAlias type="kr.block.codingdora.vo.D_commVO" alias="D_commVO"/>
 	</typeAliases>
     <mappers>
     	<mapper resource="userMapper.xml"/>

@@ -47,6 +47,20 @@
 }
         
         </style>
+        
+	<script>
+		$(document).ready(function () {
+		   	$('#replyBt').on('click', checkForm);
+		});
+		
+		function checkForm() {
+			var reply = $('#reply').val();
+			
+			if (reply == '') {
+				return false;
+			}
+		}
+	</script>
 	</head>
     <body>
     	<!-- header -->
@@ -76,26 +90,27 @@
             	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
                 	<article role="pge-title-content">
                     	<header>
-                        	<h2><span>Main Title</span>sub title</h2>
+                        	<h2><span>${readPost.d_name}</span>sub title</h2>
                         </header>
                         <p>:: introduce part::</p>
                     </article>
                 </section>
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 	<article class="about-content">
-                    	<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc, fiant sollemnes in futurum.</p>
+                		<p>XXXX.XX.XX까지</p>
+                        
                         <p class="rate-one">
      						<span class="rate-bar">
         						<span class="rate-bar-value"></span>
     						</span>
-    						10
+    						${readPost.d_goalMoney}
   						</p>
 
   						<p class="rate-two">
      						<span class="rate-bar">
         						<span class="rate-bar-value"></span>
     						</span>
-    						5.5
+    						${readPost.d_totalMoney}
   						</p>
   						<div id="main-content">
   <div>
@@ -187,16 +202,18 @@
                 	<article class="post-details" id="post-details">
                         <header role="bog-header" class="bog-header text-center">
                             <h3><span>20</span> July 2016</h3>
-                            <h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed volutpat vitae facilisis sodales, eu nibh ultricies semper.</h2>
+                            <h2>사업내용</h2>
+                            <p>${readPost.d_introduce}</p>
                         </header>
                         <figure>
                             <img src="resources/images/blog-images/blog-details-image.jpg" alt="" class="img-responsive"/>
                         </figure>
                         <div class="enter-content">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.</p>
-                            <p>Praesent posuere sapien est, vitae bibendum risus iaculis ut. Phasellus porta libero eget turpis varius dapibus. Phasellus elementum tempor quam in consectetur. Donec a nisl vehicula metus accumsan lacinia. Cras vehicula massa dui. Quisque ac vehicula turpis. Duis sodales magna risus. Donec tellus risus, vulputate id finibus et, consectetur sit amet Praesent posuere sapien est, vitae bibendum risus iaculis ut. Phasellus porta lnisl.</p>
-                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec rhoncus iaculis eros nec dapibus. Vestibulum lacinia libero et metus rhoncus, vel convallis mi facilisis. Donec in augue nec est molestie gravida varius id sapien. Aliquam at augue ante. Quisque ut diam in nibh malesuada tempor. Proin elementum nisl ac erat finibus, ut viverra mauris lobortis. Pellentesque et ipsum nisl. Integer tincidunt, urna fermentum sodales mattis, ipsum libero mattis lacus, vitae semper risus magna ac mi. Donec auctor ante ornare, fringilla orci vitae, porttitor urna. Donec pretium eu mauris ac bibendum. Cras aliquam faucibus ligula, et porta arcu tincidunt id. Pellentesque viverra tortor vitae pellentesque placerat. </p>
+                        	<h2>기부금 사용계획</h2>
+                            <p>${readPost.d_plan}</p>
+                            <h2>사업대상 및 기대효과</h2>
+                            <p>${readPost.d_target}
+                            <p>${readPost.d_effect}</p>
                         </div>
                 	</article>
                     
@@ -204,44 +221,26 @@
                 <div class="comments-pan">
                 	<h3>3 Comments</h3>
                     <ul class="comments-reply">
-                    	<li>
-                        	<figure>
-                            	<img src="resources/images/blog-images/image-1.jpg" alt="" class="img-responsive"/>
-                            </figure>
-                            <section>
-                                <h4>Anna Greenfield      <a href="#">Reply</a></h4>
-                                <div class="date-pan">January 26, 2016</div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-                            </section>
-							<ol class="reply-pan">
-                            	<li>
-                                	<figure>
-                                    	<img src="resources/images/blog-images/image-2.jpg" alt="" class="img-responsive"/>
-                                    </figure>
-                                    <section>
-                                        <h4>Johnathan Doe  <a href="#">Reply</a></h4>
-                                        <div class="date-pan">January 26, 2016</div>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-                                    </section>
-                                </li>
-                            </ol>
-                        </li>
-                        <li>
-                        	<figure>
-                            	<img src="resources/images/blog-images/image-3.jpg" alt="" class="img-responsive"/>
-                            </figure>
-                            <section>
-                                <h4>Anna Greenfield  <a href="#">Reply</a></h4>
-                                <div class="date-pan">January 26, 2016</div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-                            </section>
-                        </li>
+                    	<c:forEach var="comment" items="${readComment}">
+	                        <li>
+	                        	<figure>
+	                            	<img src="resources/images/blog-images/image-1.jpg" alt="" class="img-responsive"/>
+	                            </figure>
+	                            <section>
+	                                <h4>${comment.userid}      <a href="#">Reply</a></h4>
+	                                <div class="date-pan">January 26, 2016</div>
+	                                ${comment.d_comm_text}
+	                            </section>
+	                        </li>	
+                    	</c:forEach>
                     </ul>
+                    <c:if test="${userId != null}">
                     <div class="commentys-form">
                     	<h4>Leave a comment</h4>
                         <div class="row">
                         	<form action="" method="get">
-                            	<div class="col-xs-12 col-sm-4 col-md-4">
+<!--
+                             	<div class="col-xs-12 col-sm-4 col-md-4">
                                 	<input name="" type="text" placeholder="Whats your name *">
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-md-4">
@@ -251,15 +250,17 @@
                                 	<input name="" type="url" placeholder="Runing a Website">
                                 </div>
                                 <div class="clearfix"></div>
+-->
                                  <div class="col-xs-12 col-sm-12 col-md-12">
-                                 	<textarea name="" cols="" rows="" placeholder="Whats in your mind"></textarea>
+                                 	<textarea id="reply" name="reply" cols="" rows="" placeholder="Whats in your mind"></textarea>
                                 </div>
                                 <div class="text-center">
-                                	<input name="" type="button" value="Post Comment">
+                                	<input id="replyBt" name="replyBt" type="button" value="Post Comment">
                                 </div>
                             </form>
                         </div>
                     </div>
+					</c:if>
                 </div>
                 </div>
             
@@ -291,7 +292,6 @@
             <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
         </footer>
         <!-- footer -->
-
     
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

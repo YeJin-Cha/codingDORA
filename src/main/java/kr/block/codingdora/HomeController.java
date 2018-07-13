@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.block.codingdora.dao.DonationDAO;
+import kr.block.codingdora.vo.D_commVO;
 import kr.block.codingdora.vo.DonationVO;
 
 @Controller
@@ -25,28 +26,9 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		ArrayList<DonationVO> donationList;
-		ArrayList<DonationVO> oddPost = new ArrayList<DonationVO>();
-		ArrayList<DonationVO> evenPost = new ArrayList<DonationVO>();
-		
 		donationList = donationDAO.selectAll();
 		
-		for (int i = 0; i < donationList.size(); i++) {
-			System.out.println(i%2);
-			if (i%2 != 0) {
-				oddPost.add(donationList.get(i));
-			} else {
-				evenPost.add(donationList.get(i));
-			}
-		}
-		
-		System.out.println(oddPost.toString());
-		System.out.println(evenPost.toString());
-		
 		model.addAttribute("donationList", donationList);
-		model.addAttribute("oddPost", oddPost);
-		model.addAttribute("evenPost", evenPost);
-		model.addAttribute("oddSize", oddPost.size());
-		model.addAttribute("evenSize", evenPost.size());
 		return "home";
 	}
 
@@ -57,7 +39,16 @@ public class HomeController {
 	
 	// 임시 페이지 이동
 	@RequestMapping(value = "postdetail" , method = RequestMethod.GET)
-	public String postdetail(){
+	public String postdetail(int d_num, Model model){
+		DonationVO readPost;
+		ArrayList<D_commVO> readComment;
+		
+		readPost = donationDAO.selectPost(d_num);
+		readComment = donationDAO.selectComment(d_num);
+		
+		System.out.println(readComment.toString());
+		model.addAttribute("readPost", readPost);
+		model.addAttribute("readComment", readComment);
 		return "about";
 	}
 	
