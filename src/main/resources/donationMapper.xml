@@ -44,6 +44,18 @@
 		select * from table_donation where d_num = #{d_num}
 	</select>
 	
+	<insert id="insertComment" parameterType="D_commVO">
+		insert into table_d_comm(
+			d_num
+			,d_comm_text
+			,userid
+		)values(
+			#{d_num}
+			,#{d_comm_text}
+			,#{userid}
+		)
+	</insert>
+	
 	<select id="selectComment" parameterType="int" resultType="D_commVO">
 		select * from table_d_comm where d_num = #{d_num}
 	</select>

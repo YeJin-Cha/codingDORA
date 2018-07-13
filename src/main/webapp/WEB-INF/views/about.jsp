@@ -25,6 +25,9 @@
         <!-- font-awesome -->
         <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
+        
+        <script src="resources/js/jquery-3.2.1.min.js"></script>
+        
         <style type="text/css">
 .rate-bar {
   position: relative;
@@ -55,10 +58,24 @@
 		
 		function checkForm() {
 			var reply = $('#reply').val();
-			
+			var num = "${postNum}";
 			if (reply == '') {
 				return false;
 			}
+		
+		
+		 	$.ajax({
+				url: 'writeReply',
+				type: 'get',
+				data: {reply: reply, d_num: num},
+				datatype: 'text',
+				success: function(isCorrect) {
+					location.href = "/codingdora/postdetail?d_num="+isCorrect;
+				},
+				error: function (e) {
+					alert('실패');
+				}
+			});
 		}
 	</script>
 	</head>
@@ -227,8 +244,8 @@
 	                            	<img src="resources/images/blog-images/image-1.jpg" alt="" class="img-responsive"/>
 	                            </figure>
 	                            <section>
-	                                <h4>${comment.userid}      <a href="#">Reply</a></h4>
-	                                <div class="date-pan">January 26, 2016</div>
+	                                <h4>${comment.userid}      <!-- <a href="#">Reply</a> --></h4>
+	                                <div class="date-pan">${comment.d_comm_date}</div>
 	                                ${comment.d_comm_text}
 	                            </section>
 	                        </li>	
@@ -238,7 +255,7 @@
                     <div class="commentys-form">
                     	<h4>Leave a comment</h4>
                         <div class="row">
-                        	<form action="" method="get">
+                        	<form>
 <!--
                              	<div class="col-xs-12 col-sm-4 col-md-4">
                                 	<input name="" type="text" placeholder="Whats your name *">

@@ -10,4 +10,5 @@ public interface DonationMapper {
 	public void insertPost(DonationVO vo);
 	public DonationVO selectPost(int d_num);
 	public ArrayList<D_commVO> selectComment(int d_num);
+	public void insertComment(D_commVO commVO);
 }

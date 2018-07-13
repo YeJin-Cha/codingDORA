@@ -36,9 +36,19 @@ public class DonationDAO {
 		return mapper.selectPost(d_num);
 	}
 
+	public void insertComment(D_commVO commVO) {
+		DonationMapper mapper = sqlSession.getMapper(DonationMapper.class);
+		try {
+			mapper.insertComment(commVO);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList<D_commVO> selectComment(int d_num) {
 		DonationMapper mapper = sqlSession.getMapper(DonationMapper.class);
 		
 		return mapper.selectComment(d_num);
 	}
+
 }
