@@ -8,8 +8,17 @@
  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>:: codingDORA | New Post ::</title>
+<script>
+//폼체크 
+function formCheck(){
+		var d_introduce = document.getElementByName('d_introduce');
+		alert(d_introduce);
+	}
+</script>
 </head>
 <body>
+
+<form action="insertPost" method="post" onsubmit="return formCheck();">
 <div id="form" class="form-wrapper">
   <label class="text">
     <span>Title</span>
@@ -49,7 +58,7 @@
   <label class="dropdown">
     <span>GoalMoney</span>
     <div class="input-wrapper">
-      <select size="1" name="goalMoney">
+      <select size="1" name="d_goalMoney">
         <option>-- Please choose --</option>
         <option value="1">1eth</option>
         <option value="10">10eth</option>
@@ -65,21 +74,21 @@
     
     <div class="input-wrapper">
       <label class="radio" for="week">
-        <input type="radio" name="term" value="week" id="week"/>
+        <input type="radio" name="d_term" value="week" id="week"/>
         <span>1week</span>
       </label>
     </div>
     
     <div class="input-wrapper">
       <label class="radio" for="month" >
-        <input type="radio" name="term" value="month" id="month"/>
+        <input type="radio" name="d_term" value="month" id="month"/>
         <span>1month</span>
       </label>
     </div>
     
     <div class="input-wrapper">    
       <label class="radio" for="year">
-        <input type="radio" name="term" value="year" id="year"/>
+        <input type="radio" name="d_term" value="year" id="year"/>
         <span>1year</span>
       </label>
     </div>
@@ -92,7 +101,7 @@
 <span class="notes">* can not update, delete</span>
 </div>  
 
-
+</form>
 </body>
   <script src="../resources/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">

@@ -6,4 +6,5 @@ import kr.block.codingdora.vo.DonationVO;
 
 public interface DonationMapper {
 	public ArrayList<DonationVO> selectAll();
+	public void insertPost(DonationVO vo);
 }

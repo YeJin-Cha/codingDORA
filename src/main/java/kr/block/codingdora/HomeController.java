@@ -25,9 +25,28 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		ArrayList<DonationVO> donationList;
+		ArrayList<DonationVO> oddPost = new ArrayList<DonationVO>();
+		ArrayList<DonationVO> evenPost = new ArrayList<DonationVO>();
 		
 		donationList = donationDAO.selectAll();
+		
+		for (int i = 0; i < donationList.size(); i++) {
+			System.out.println(i%2);
+			if (i%2 != 0) {
+				oddPost.add(donationList.get(i));
+			} else {
+				evenPost.add(donationList.get(i));
+			}
+		}
+		
+		System.out.println(oddPost.toString());
+		System.out.println(evenPost.toString());
+		
 		model.addAttribute("donationList", donationList);
+		model.addAttribute("oddPost", oddPost);
+		model.addAttribute("evenPost", evenPost);
+		model.addAttribute("oddSize", oddPost.size());
+		model.addAttribute("evenSize", evenPost.size());
 		return "home";
 	}
 

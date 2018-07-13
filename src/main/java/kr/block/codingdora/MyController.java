@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import kr.block.codingdora.dao.DonationDAO;
 import kr.block.codingdora.dao.UserDAO;
+import kr.block.codingdora.vo.DonationVO;
 import kr.block.codingdora.vo.UserVO;
 
 @Controller
@@ -28,6 +30,9 @@ public class MyController {
 	
 	@Autowired
 	UserDAO userDAO;
+//	dsadsadsad
+	@Autowired
+	DonationDAO donationDAO;
 	
 	@RequestMapping(value = "profile", method = RequestMethod.GET)
 	public String profile(){
@@ -116,6 +121,17 @@ public class MyController {
 		return "0";
 	}
 	
-	
+	@RequestMapping(value="insertPost" , method=RequestMethod.POST)
+	public String insertPost(DonationVO dvo, HttpSession session){
+		logger.info("{}",dvo);
+		
+		String userid =(String)session.getAttribute("userId");
+		dvo.setUserid(userid);
+		
+		donationDAO.insertPost(dvo);
+		System.out.println("------------");
+		
+		return "redirect:../";
+	}
 	
 }

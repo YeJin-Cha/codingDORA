@@ -92,72 +92,86 @@
                 </section>
 
                 <div class="clearfix"></div>
+				<c:forEach var="post" items="${donationList}" varStatus="don" step="4">
+					<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+	                	<ul class="grid-lod effect-2" id="grid">
+	                    	<li>
+	                        	<figure class="effect-oscar">
+	                            <img src="resources/images/home-images/image-2.jpg" alt="" class="img-responsive"/>
+	                            <figcaption>
+	                                    <h2>${post.d_name}</h2>
+	                                    <p>${post.d_totalMoney}</p>
+	                                    <p>${post.d_totalMoney}</p>
+	                                    <p>${post.d_goalMoney}</p>
+	                                    <p>${post.d_term}</p>
+	                                    <a href="works-details.jsp">View more</a>
+	                            </figcaption>
+	                        </figure>
+	                        </li>
 
-                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
-                	<ul class="grid-lod effect-2" id="grid">
-                    	<li>
-                        	<figure class="effect-oscar">
-                            <img src="resources/images/home-images/image-2.jpg" alt="" class="img-responsive"/>
-                            <figcaption>
-                                    <h2>Studio Thonik <span>Exhibition</span></h2>
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-                                    <a href="works-details.jsp">View more</a>
-                            </figcaption>
-                        </figure>
-                        </li>
-                        <li>
-                        	<figure class="effect-oscar">
-                            <img src="resources/images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-                            <figcaption>
-                                <h2>A Brand <span>new Agency</span></h2>
-                                <p>Over 40,000 customers use our themes to power their</p>
-                                <a href="works-details.jsp">View more</a>
-                            </figcaption>
-                        </figure>
-                        </li>
-                    </ul>
-                </section>
+ 							<c:if test="${don.index < fn:length(donationList)}">
+	                        	<c:set var="nextVal" value="${donationList[don.index+1]}"/>
+		                        <li>
+		                        	<figure class="effect-oscar">
+		                            <img src="resources/images/home-images/image-4.jpg" alt="" class="img-responsive"/>
+		                            <figcaption>
+		                                    <h2>${nextVal.d_name}</h2>
+		                                    <p>${nextVal.d_totalMoney}</p>
+		                                    <p>${nextVal.d_totalMoney}</p>
+		                                    <p>${nextVal.d_goalMoney}</p>
+		                                    <p>${nextVal.d_term}</p>
+		                                <a href="works-details.jsp">View more</a>
+		                            </figcaption>
+		                        </figure>
+		                        </li>
+							</c:if>
+	                    </ul>
+	                </section>
 
-                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
-                	<ul class="grid-lod effect-2" id="grid">
-                    	<li>
-                        	<figure class="effect-oscar">
-                            <img src="resources/images/home-images/image-3.jpg" alt="" class="img-responsive"/>
-                             <figcaption>
-                                <h2>Anatome Milano <span>Galleria</span></h2>
-                                <p>Galerie Anatome based in Paris</p>
-                                <a href="works-details.jsp">View more</a>
-                            </figcaption>
-                        </figure>
-                        </li>
-                        <li>
-                        	<figure class="effect-oscar">
-                            <img src="resources/images/home-images/image-5.jpg" alt="" class="img-responsive"/>
-                             <figcaption>
-                                <h2>A Brand <span>new Agency</span></h2>
-                                <p>Over 40,000 customers use our themes to power their</p>
-                                <a href="works-details.jsp">View more</a>
-                            </figcaption>
-                        </figure>
-                        </li>
-                    </ul>
-                </section>
-                
-				<c:forEach var="donation" items="${donationList}">
-					${donation.d_num}
-					${donation.userid}
-					${donation.d_name}
-					${donation.d_content}
-					${donation.d_introduce}
-					${donation.d_target}
-					${donation.d_effect}
-					${donation.d_goalMoney}
-					${donation.d_totalMoney}
-					${donation.d_targetWallet}
-					${donation.d_term}
-					${donation.d_images}
+ 					<c:if test="${don.index+2 < fn:length(donationList)}">
+	                	<c:set var="nextVal" value="${donationList[don.index+2]}"/>
+	                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+	                	<ul class="grid-lod effect-2" id="grid">
+	                    	<li>
+	                        	<figure class="effect-oscar">
+	                        	<!-- 
+	                        		${donation.d_effect}
+	                        		${donation.d_num}
+	                        		${donation.d_images}
+	                        	 -->
+	                            <img src="resources/images/home-images/image-3.jpg" alt="" class="img-responsive"/>
+	                            <figcaption>
+	                                    <h2>${nextVal.d_name}</h2>
+	                                    <p>${nextVal.d_totalMoney}</p>
+	                                    <p>${nextVal.d_totalMoney}</p>
+	                                    <p>${nextVal.d_goalMoney}</p>
+	                                    <p>${nextVal.d_term}</p>
+	                                    <a href="works-details.jsp">View more</a>
+	                            </figcaption>
+	                        </figure>
+	                        </li>
+
+ 							<c:if test="${don.index+3 <  fn:length(donationList)}">
+	                        	<c:set var="nextVal" value="${donationList[don.index+3]}"/>
+		                        <li>
+		                        	<figure class="effect-oscar">
+		                            <img src="resources/images/home-images/image-5.jpg" alt="" class="img-responsive"/>
+		                            <figcaption>
+		                                    <h2>${nextVal.d_name}</h2>
+		                                    <p>${nextVal.d_totalMoney}</p>
+		                                    <p>${nextVal.d_totalMoney}</p>
+		                                    <p>${nextVal.d_goalMoney}</p>
+		                                    <p>${nextVal.d_term}</p>
+		                                <a href="works-details.jsp">View more</a>
+		                            </figcaption>
+		                        </figure>
+		                        </li>
+							</c:if>
+	                    </ul>
+	                </section>
+	                </c:if>
 				</c:forEach>
-				
+
                 <div class="clearfix"></div>
             </div>
         </main>

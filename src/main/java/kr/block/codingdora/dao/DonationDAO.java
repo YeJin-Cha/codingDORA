@@ -20,4 +20,14 @@ public class DonationDAO {
 		System.out.println(mapper.selectAll().toString());
 		return mapper.selectAll();
 	}
+	
+	//DonationVo 등록
+			public void insertPost(DonationVO vo){
+				DonationMapper mapper = sqlSession.getMapper(DonationMapper.class);
+				try{
+					mapper.insertPost(vo);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
 }

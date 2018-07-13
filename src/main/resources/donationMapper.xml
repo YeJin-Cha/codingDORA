@@ -7,4 +7,37 @@
 	<select id="selectAll" resultType="DonationVO">
 		select * from table_donation
 	</select>
+	
+		<insert id="insertPost" parameterType="DonationVO">
+		insert into table_donation(
+			d_num
+			,userid
+			,d_name
+			,d_content
+			,d_introduce
+			,d_plan
+			,d_target
+			,d_effect
+			,d_goalMoney
+			,d_totalMoney
+			,d_targetWallet
+			,d_term
+			,d_images
+		)values(
+			#{d_num}
+			,#{userid}
+			,#{d_name}
+			,#{d_content}
+			,#{d_introduce}
+			,#{d_plan}
+			,#{d_target}
+			,#{d_effect}
+			,#{d_goalMoney}
+			,#{d_totalMoney}
+			,#{d_targetWallet}
+			,#{d_term}
+			,#{d_images}
+		)
+	</insert>
+	
 </mapper>
