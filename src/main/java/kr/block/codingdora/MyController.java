@@ -70,14 +70,14 @@ public class MyController {
 	}
 
 	@RequestMapping(value = "/insertUser", method = RequestMethod.POST)
-	public String insertUser(UserVO userVO) throws MessagingException, UnsupportedEncodingException {
+	public String insertUser(UserVO userVO, String userid) throws MessagingException, UnsupportedEncodingException {
 		userDAO.insertUser(userVO);
 		System.out.println(userVO.getUseremail());
 		String title = "GURUME365 ";
 		MailHandler sendMail = new MailHandler(mailSender);
 		sendMail.setSubject(title);
 		sendMail.setText(new StringBuffer().append("<h1>메일 인증</h1>")
-				.append("<a href='https://localhost:8888/codingdora/my/permit?id='" + userVO.getUserid())
+				.append("<a href='http://localhost:8888/codingdora/my/permit?userid="+userid)
 				.append("' target='_blank'>이메일 인증 확인</a>").toString());
 		sendMail.setFrom("gurume365", title);
 		sendMail.setTo(userVO.getUseremail());
@@ -86,10 +86,11 @@ public class MyController {
 	}
 
 	
-	@RequestMapping(value = "permit", method = RequestMethod.GET)
-	public String permit(String userid) {
-		logger.info("permit");
+	@RequestMapping(value = "/permitUser", method = RequestMethod.GET)
+	public String permitUser(String userid) {
+		System.out.println("userid: "+userid);
 		UserVO userVO = userDAO.selectUser(userid);
+		System.out.println(userVO);
 		if(userVO.getUserpermit().equals("N")&&userVO != null){
 			userDAO.permitUser(userVO);
 		}
