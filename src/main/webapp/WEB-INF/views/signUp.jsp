@@ -49,10 +49,18 @@ function checkLoginForm() {
 		success: function(isCorrect) {
 			if (isCorrect == 1) {
 				location.href = "/codingdora";
-			} else {
+			} else if(isCorrect == 0) {
 				$('.login-box #id').css('margin-bottom', '20px');
 				$('.login-box #password').css('margin-bottom', '0px');
 				$('#login_err').html('아이디 또는 비밀번호를 다시 확인하세요.');
+				$('#login_err').css('color', 'red');
+				$('#login_err').show();
+				$('#id_err').hide();
+				$('#pwd_err').hide();
+			} else if(isCorrect == 2){
+				$('.login-box #id').css('margin-bottom', '20px');
+				$('.login-box #password').css('margin-bottom', '0px');
+				$('#login_err').html('이메일 인증 후 이용 가능합니다. ');
 				$('#login_err').css('color', 'red');
 				$('#login_err').show();
 				$('#id_err').hide();

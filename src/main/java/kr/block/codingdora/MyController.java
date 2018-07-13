@@ -113,6 +113,7 @@ public class MyController {
 		
 		if (vo != null) {
 			if (password.equals(vo.getUserpw())) {
+				if(vo.getUserpermit().equals("N")) return "2";
 				session.setAttribute("userId", vo.getUserid());
 				session.setAttribute("userName", vo.getUsername());
 				return "1";
