@@ -50,5 +50,15 @@ public class DonationDAO {
 		
 		return mapper.selectComment(d_num);
 	}
-
+	
+	public ArrayList<DonationVO> selectDonationUser(String userid){
+		DonationMapper mapper = sqlSession.getMapper(DonationMapper.class);
+		ArrayList<DonationVO> list = null;
+		try{
+			list = mapper.selectDonationUser(userid);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return list;
+	}
 }

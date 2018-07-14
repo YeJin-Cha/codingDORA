@@ -3,6 +3,7 @@ package kr.block.codingdora;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -44,12 +45,16 @@ public class MyController {
 		return "introduceDORA";
 	}
 	
+	
 	@RequestMapping(value = "fundingList", method = RequestMethod.GET)
-	public String fundingList(){
+	public String fundingList(HttpSession session, Model model){
 		logger.info("fundingList");
+		String id = (String) session.getAttribute("userId");
+		ArrayList<DonationVO> list = donationDAO.selectDonationUser(id);
+		model.addAttribute("dlist", list);
+		logger.info("donation list! {}"+list);
 		return "blog";
 	}
-	
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout(HttpSession session){
 		logger.info("logout");

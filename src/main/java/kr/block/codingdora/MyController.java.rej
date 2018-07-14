@@ -1,0 +1,8 @@
+diff a/src/main/java/kr/block/codingdora/MyController.java b/src/main/java/kr/block/codingdora/MyController.java	(rejected hunks)
+@@ -136,4 +136,6 @@
+ 		return "redirect:../";
+ 	}
+ 	
++	
++	
+ }

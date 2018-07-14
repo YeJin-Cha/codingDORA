@@ -107,16 +107,15 @@ function checkLoginForm() {
        
         <form class="form-signup" action="my/insertUser" method="post" name="form">
         
-          <label for="confirmpassword">ID</label>
-          	<input class="form-styling" type="text" name="userid" placeholder=""/>
           <label for="fullname">Full name</label>
          	 <input class="form-styling" type="text" name="username" placeholder=""/>
           <label for="email">Email</label>
           	<input class="form-styling" type="text" name="useremail" placeholder=""/>
           <label for="password">Password</label>
-          	<input class="form-styling" type="password" name="userpw" placeholder=""/>
-          <label for="password">Confirm Password</label>
-          	<input class="form-styling" type="password" placeholder=""/>
+          	<input class="form-styling" type="text" name="userpw" placeholder=""/>
+          <label for="confirmpassword">Confirm password</label>
+          	<input class="form-styling" type="text" name="userid" placeholder=""/>
+          
           <!-- <a ng-click="checked = !checked" class="btn-signup">Sign Up</a> -->
 		<input type="submit" class="btn-signup" value="Sign Up">
 		</form>

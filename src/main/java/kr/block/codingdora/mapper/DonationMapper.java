@@ -11,4 +11,5 @@ public interface DonationMapper {
 	public DonationVO selectPost(int d_num);
 	public ArrayList<D_commVO> selectComment(int d_num);
 	public void insertComment(D_commVO commVO);
+	public ArrayList<DonationVO> selectDonationUser(String userid);
 }

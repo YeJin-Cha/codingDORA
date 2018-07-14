@@ -42,6 +42,12 @@
 		select * from table_donation where d_num = #{d_num}
 	</select>
 	
+	<select id="selectDonationUser" parameterType="String" resultType="DonationVO">
+		select * from table_donation where userid = #{userid}
+	</select>
+	
+	
+	
 	<insert id="insertComment" parameterType="D_commVO">
 		insert into table_d_comm(
 			d_num
