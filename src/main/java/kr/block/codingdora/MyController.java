@@ -1,6 +1,10 @@
 package kr.block.codingdora;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.inject.Inject;
 import javax.mail.MessagingException;
@@ -125,13 +129,29 @@ public class MyController {
 	
 	@RequestMapping(value="insertPost" , method=RequestMethod.POST)
 	public String insertPost(DonationVO dvo, HttpSession session){
-		logger.info("{}",dvo);
-		
+		String term = dvo.getD_term();
 		String userid =(String)session.getAttribute("userId");
-		dvo.setUserid(userid);
+
+	    Calendar cal = Calendar.getInstance();
+	    cal.setTime(new Date());
 		
+		if (term.equals("week")) {
+			cal.add(Calendar.DATE, 7);
+		} else if (term.equals("month")) {
+			cal.add(Calendar.DATE, 30);
+		} else {
+			cal.add(Calendar.DATE, 365);
+		}
+		
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		String strDate = df.format(cal.getTime());
+		
+		
+		dvo.setUserid(userid);
+		dvo.setD_term(strDate);
+		
+		logger.info("{}",dvo);
 		donationDAO.insertPost(dvo);
-		System.out.println("------------");
 		
 		return "redirect:../";
 	}

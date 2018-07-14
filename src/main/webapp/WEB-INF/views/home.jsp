@@ -42,7 +42,7 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="/" title="codingDARA funding"><img style="width: 150px;" src="resources/images/logo.png" title="codingDORA" alt="codingDORA"/></a>
+                        	<a href="/codingdora" title="codingDARA funding"><img style="width: 150px;" src="resources/images/logo.png" title="codingDORA" alt="codingDORA"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
