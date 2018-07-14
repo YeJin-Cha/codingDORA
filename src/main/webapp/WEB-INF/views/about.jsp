@@ -54,7 +54,29 @@
 	<script>
 		$(document).ready(function () {
 		   	$('#replyBt').on('click', checkForm);
+		   	$('#fundingVal').on('change', changeValue);
 		});
+		
+		function changeValue() {
+	   		var fundingVal = $('#fundingVal').val();
+	   		var changeVal = $('#changeVal').val();
+	   		var num = "${postNum}";
+	   		
+            $.ajax({
+                type: "GET",
+                url: "changeVal",
+                datatype: 'text',
+                data: {'d_num': num},
+				success: function(isCorrect) {
+					changeVal = fundingVal * 2000;
+					$('#changeVal').val(changeVal);
+				},
+				error: function (e) {
+					alert('실패');
+				}
+            });
+		}
+		
 		
 		function checkForm() {
 			var reply = $('#reply').val();
@@ -132,6 +154,8 @@
   						                    </article>
                 </section>
                 <div class="commentys-form" style="display: inline;">
+                		<input type="text" id="fundingVal" name="fundingVal">
+                		<input type="text" id="changeVal" name="changeVal" disabled="disabled">
                        	<input name="" type="button" value="Funding">
 					</div>
 				<div class='middle-wrapper'>

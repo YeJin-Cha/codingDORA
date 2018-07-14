@@ -57,6 +57,12 @@ public class HomeController {
 		return "about";
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "changeVal", method = RequestMethod.GET)
+	public int changeVal(int d_num) {
+		
+		return d_num;
+	}	
 	
 	@ResponseBody
 	@RequestMapping(value = "writeReply", method = RequestMethod.GET)
