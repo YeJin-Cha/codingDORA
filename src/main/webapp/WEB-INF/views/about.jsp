@@ -17,44 +17,46 @@
         <!-- style -->
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
         <link href="resources/css/like.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/ratebar.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/inputText.css" rel="stylesheet" type="text/css">
         <!-- style -->
         <!-- bootstrap -->
         <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- responsive -->
         <link href="resources/css/responsive.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
         
         <script src="resources/js/jquery-3.2.1.min.js"></script>
         
-        <style type="text/css">
-.rate-bar {
-  position: relative;
-  width: 90%;
-  background-color: #fff;
-  vertical-align: middle;
-    height: 10px;
-  display: inline-block;
-}
-.rate-bar span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: tomato;
-  transition: 1s;
-  width: 0;
-  transition: .4s;
-    height: 10px;
-  display: inline-block;
-}
-        
-        </style>
-        
 	<script>
 		$(document).ready(function () {
 		   	$('#replyBt').on('click', checkForm);
 		   	$('#fundingVal').on('change', changeValue);
+		   	
+		   	var totalMoney = ${readPost.d_totalMoney};
+    		console.log(totalMoney);
+        	var goalMoney = ${readPost.d_goalMoney};
+        	console.log(goalMoney);
+        	var parcentage = totalMoney/goalMoney * 100 ;
+        	console.log(parcentage.toFixed(1));
+        	
+        	if (parcentage <= 10){
+        		
+        	}else if(parcentage >=100){
+        		$("#progress").css("width","100%");
+        	}else{
+        		$("#progress").css("width",parcentage+"%");
+        	}
+        	
+        	$("#zyuu").append(goalMoney*0.1);
+        	$("#san").append(goalMoney*0.3);
+        	$("#roku").append(goalMoney*0.6);
+        	$("#hachi").append(goalMoney*0.8);
+        	
+
 		});
 		
 		function changeValue() {
@@ -136,28 +138,46 @@
                 </section>
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 	<article class="about-content">
-                		<p>XXXX.XX.XX까지</p>
+                		<p>${readPost.d_term}</p>
                         
-                        <p class="rate-one">
-     						<span class="rate-bar">
-        						<span class="rate-bar-value"></span>
-    						</span>
-    						${readPost.d_goalMoney}
-  						</p>
-
-  						<p class="rate-two">
-     						<span class="rate-bar">
-        						<span class="rate-bar-value"></span>
-    						</span>
-    						${readPost.d_totalMoney}
-  						</p>
-  						                    </article>
-                </section>
-                <div class="commentys-form" style="display: inline;">
-                		<input type="text" id="fundingVal" name="fundingVal">
-                		<input type="text" id="changeVal" name="changeVal" disabled="disabled">
-                       	<input name="" type="button" value="Funding">
-					</div>
+                        <!-- rate bar -->
+                        <div id="goal"><i class="fab fa-ethereum"></i>  ${readPost.d_goalMoney}</div>
+  						<div id="glass">
+    						<div id="progress"><i class="fab fa-ethereum"></i>   ${readPost.d_totalMoney}</div>
+    						
+  						</div>
+  						<div class="goal-stat">
+    						<span class="goal-number">10%</span>
+    						<span class="goal-label" id="zyuu"><i class="fab fa-ethereum"></i>  </span>
+  						</div>
+  						<div class="goal-stat">
+    						<span class="goal-number">30%</span>
+    						<span class="goal-label" id="san"><i class="fab fa-ethereum"></i>  </span>
+  						</div>
+  						<div class="goal-stat">
+    						<span class="goal-number">60%</span>
+    						<span class="goal-label" id="roku"><i class="fab fa-ethereum"></i>  </span>
+  						</div>
+  						<div class="goal-stat">
+    						<span class="goal-number">80%</span>
+    						<span class="goal-label" id="hachi"><i class="fab fa-ethereum"></i>  </span>
+  						</div>	
+				<div class="d_info">
+					<span>if you donate</span>
+					<span><i class="fab fa-ethereum"></i>   <input type="text" id="fundingVal" name="fundingVal" placeholder="ex) 100"></span>
+				
+					<span>you can get</span>
+					<span><i class="fas fa-seedling"></i>   <input type="text" id="changeVal" name="changeVal" disabled="disabled"></span>
+                	
+				</div>
+               	<div class="commentys-form">
+               		<input type="button" value="Funding" name="">
+               	</div>
+			</div>
+  						<!-- /rate bar -->
+  						
+			</article>
+          </section>
 				<div class='middle-wrapper'>
   					<div class='like-wrapper'>
     					<a class='like-button'>

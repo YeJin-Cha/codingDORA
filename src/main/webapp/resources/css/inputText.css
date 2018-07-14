@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+.d_info{
+	 font-family: 'Patua One', cursive;
+	 font-size: 2.8rem;
+	 color: white;
+	 position: relative;
+	 left: 50%;
+}
+.d_info span{
+	display: block;
+}
+.d_info input[type="text"]::placeholder {
+	color : rgba(88,88,88,0.8);
+}
+.d_info input[type="text"]::BEFORE,
+.d_info input[type="text"]::AFTER,
+.d_info input[type="text"]
+{
+	background-color: rgba(233,233,233,0);
+	border-bottom: 1px dashed #007a73;
+	width: 20rem;
+}
+.d_info input[type="text"]:FOCUS {
+	transition: border-bottom 0.7s;
+	border-bottom: 1px dashed #f9f7a6;
+}
