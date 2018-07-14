@@ -13,20 +13,20 @@
         <!-- Description, Keywords and Author -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>:: codingDARA | Profile ::</title>
+        <title>:: codingDARA | introduceDORA ::</title>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <!-- style -->
-        <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/style.css" rel="stylesheet" type="text/css">
         <!-- style -->
         <!-- bootstrap -->
-        <link href="../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- responsive -->
-        <link href="../resources/css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/responsive.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
-        <link href="../resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- font-awesome -->
-        <link href="../resources/css/effects/set2.css" rel="stylesheet" type="text/css">
-        <link href="../resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/effects/set2.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
 	</head>
 
 
@@ -37,7 +37,7 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="index.jsp" title="avana LLC"><img src="../resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
@@ -100,7 +100,7 @@
         <footer role="footer">
             <!-- logo -->
                 <h1>
-                    <a href="index.jsp" title="avana LLC"><img src="../resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                 </h1>
             <!-- logo -->
             <!-- nav -->
@@ -125,17 +125,17 @@
     
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-        <script src="../resources/js/jquery.min.js" type="text/javascript"></script>
+        <script src="resources/js/jquery.min.js" type="text/javascript"></script>
         <!-- custom -->
-        <script src="../resources/js/custom.js" type="text/javascript"></script>
-		<script src="../resources/js/jquery.contact.js" type="text/javascript"></script>
-        <script src="../resources/https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
-		<script src="../resources/js/maps.js" type="text/javascript"></script>
-        <script src="../resources/js/nav.js" type="text/javascript"></script>
+        <script src="resources/js/custom.js" type="text/javascript"></script>
+		<script src="resources/js/jquery.contact.js" type="text/javascript"></script>
+        <script src="resources/https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+		<script src="resources/js/maps.js" type="text/javascript"></script>
+        <script src="resources/js/nav.js" type="text/javascript"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="../resources/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- jquery.countdown -->
-        <script src="../resources/js/html5shiv.js" type="text/javascript"></script>
+        <script src="resources/js/html5shiv.js" type="text/javascript"></script>
 
     </body>
 

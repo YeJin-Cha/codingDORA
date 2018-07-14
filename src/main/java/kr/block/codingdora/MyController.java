@@ -37,7 +37,7 @@ public class MyController {
 	@RequestMapping(value = "profile", method = RequestMethod.GET)
 	public String profile(){
 		logger.info("profile");
-		return "contract";
+		return "introduceDORA";
 	}
 	
 	@RequestMapping(value = "fundingList", method = RequestMethod.GET)
