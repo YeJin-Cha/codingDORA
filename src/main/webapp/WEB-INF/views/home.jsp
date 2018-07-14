@@ -74,9 +74,9 @@
             	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
                 	<article role="pge-title-content">
                     	<header>
-                        	<h2><span>avana</span> A Brand new Agency.</h2>
+                        	<h2><span>CodingDORA</span>We help you make a transparent donation. </h2>
                         </header>
-                        <p>This is the story of Avana, a minimal Bootstrap template for creative agency.</p>
+                        <p>Make your donation worth it by donating with Ethereum!</p>
                     </article>
                 </section>
 
@@ -84,8 +84,8 @@
                 	<figure class="effect-oscar">
                     	<img src="resources/images/home-images/image-1.jpg" alt="" class="img-responsive"/>
                         <figcaption>
-                        	<h2>Eliana Dedda<span> Identity</span></h2>
-							<p>Personal Brand Identity.</p>
+                        	<h2>introduce<span> coding DORA</span></h2>
+							<p>Please check more.</p>
 							<a href="introduceDORA">View more</a>
                         </figcaption>
                     </figure>
