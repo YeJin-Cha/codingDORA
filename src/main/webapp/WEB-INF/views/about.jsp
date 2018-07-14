@@ -194,18 +194,32 @@
                 	<article class="post-details" id="post-details">
                         <header role="bog-header" class="bog-header text-center">
                             <h3><span>20</span> July 2016</h3>
-                            <h2>사업내용</h2>
-                            <p>${readPost.d_introduce}</p>
+                            <h2>Business details</h2>
+                            <h4>${readPost.d_introduce}</h4>
                         </header>
                         <figure>
-                            <img src="resources/images/blog-images/blog-details-image.jpg" alt="" class="img-responsive"/>
+                        	<c:if test="${postNum==1}">
+                            	<img src="resources/images/blog-images/blog-details-image.png" alt="" class="img-responsive"/>
+                            </c:if>
+                            
+                        	<c:if test="${postNum==2}">
+                            	<img src="resources/images/blog-images/blog-details-image2.png" alt="" class="img-responsive"/>
+                            </c:if>
+                            
+                        	<c:if test="${postNum==3}">
+                            	<img src="resources/images/blog-images/blog-details-image3.png" alt="" class="img-responsive"/>
+                            </c:if>
+                            
+                        	<c:if test="${postNum==4}">
+                            	<img src="resources/images/blog-images/blog-details-image4.png" alt="" class="img-responsive"/>
+                            </c:if>
                         </figure>
                         <div class="enter-content">
-                        	<h2>기부금 사용계획</h2>
-                            <p>${readPost.d_plan}</p>
-                            <h2>사업대상 및 기대효과</h2>
-                            <p>${readPost.d_target}
-                            <p>${readPost.d_effect}</p>
+                        	<h2>A donation plan</h2>
+                            <h4>${readPost.d_plan}</h4>
+                            <h2>Business Target and Expected Effect</h2>
+                            <h4>${readPost.d_target}</h4>
+                            <h4>${readPost.d_effect}</h4>
                         </div>
                 	</article>
                     

@@ -82,7 +82,7 @@
 
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
                 	<figure class="effect-oscar">
-                    	<img src="resources/images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+                    	<img src="resources/images/home-images/codingDora.jpg" alt="" class="img-responsive"/>
                         <figcaption>
                         	<h2>introduce<span> coding DORA</span></h2>
 							<p>Please check more.</p>
@@ -112,7 +112,7 @@
 	                        	<c:set var="nextVal" value="${donationList[don.index+1]}"/>
 		                        <li>
 		                        	<figure class="effect-oscar">
-		                            <img src="resources/images/home-images/image-4.jpg" alt="" class="img-responsive"/>
+		                            <img src="resources/images/home-images/image-4.png" alt="" class="img-responsive"/>
 		                            <figcaption>
 		                                    <h2><span>${nextVal.d_name}</span></h2>
 										<p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
@@ -137,7 +137,7 @@
 	                        		${donation.d_num}
 	                        		${donation.d_images}
 	                        	 -->
-	                            <img src="resources/images/home-images/image-3.jpg" alt="" class="img-responsive"/>
+	                            <img src="resources/images/home-images/image-3.png" alt="" class="img-responsive"/>
 	                            <figcaption>
 	                                    <h2><span>${nextVal.d_name}</span></h2>
 										<p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
@@ -152,7 +152,7 @@
 	                        	<c:set var="nextVal" value="${donationList[don.index+3]}"/>
 		                        <li>
 		                        	<figure class="effect-oscar">
-		                            <img src="resources/images/home-images/image-5.jpg" alt="" class="img-responsive"/>
+		                            <img src="resources/images/home-images/image-5.png" alt="" class="img-responsive"/>
 		                            <figcaption>
 		                                    <h2><span>${nextVal.d_name}</span></h2>
 	                                    <p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
