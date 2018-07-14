@@ -81,4 +81,8 @@ public class HomeController {
 		return d_num;
 	}
 	
+	@RequestMapping(value = "introduceDORA" , method = RequestMethod.GET)
+	public String introduceDORA(){
+		return "doraContent";
+	}
 }

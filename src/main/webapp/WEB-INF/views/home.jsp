@@ -86,7 +86,7 @@
                         <figcaption>
                         	<h2>Eliana Dedda<span> Identity</span></h2>
 							<p>Personal Brand Identity.</p>
-							<a href="works-details.jsp">View more</a>
+							<a href="introduceDORA">View more</a>
                         </figcaption>
                     </figure>
                 </section>
