@@ -19,7 +19,6 @@
 			,d_target
 			,d_effect
 			,d_goalMoney
-			,d_totalMoney
 			,d_targetWallet
 			,d_term
 			,d_images
@@ -33,7 +32,6 @@
 			,#{d_target}
 			,#{d_effect}
 			,#{d_goalMoney}
-			,#{d_totalMoney}
 			,#{d_targetWallet}
 			,#{d_term}
 			,#{d_images}
