@@ -209,7 +209,7 @@
                         	<c:if test="${postNum==3}">
                             	<img src="resources/images/blog-images/blog-details-image3.png" alt="" class="img-responsive"/>
                             </c:if>
-                            
+                            <!--  -->
                         	<c:if test="${postNum==4}">
                             	<img src="resources/images/blog-images/blog-details-image4.png" alt="" class="img-responsive"/>
                             </c:if>

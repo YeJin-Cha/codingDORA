@@ -125,7 +125,7 @@
 							</c:if>
 	                    </ul>
 	                </section>
-
+<!--  -->
  					<c:if test="${don.index+2 < fn:length(donationList)}">
 	                	<c:set var="nextVal" value="${donationList[don.index+2]}"/>
 	                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
