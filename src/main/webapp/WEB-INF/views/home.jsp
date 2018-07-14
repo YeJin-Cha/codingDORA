@@ -99,10 +99,10 @@
 	                        	<figure class="effect-oscar">
 	                            <img src="resources/images/home-images/image-2.jpg" alt="" class="img-responsive"/>
 	                            <figcaption>
-	                                    <h2>${post.d_name}</h2>
-	                                    <p>${post.d_totalMoney}</p>
-	                                    <p>${post.d_goalMoney}</p>
-	                                    <p>${post.d_term}</p>
+	                                    <h2><span>${post.d_name}</span></h2>
+	                                    <p><span class="glyphicon glyphicon-piggy-bank"></span>  ${post.d_totalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-flag"></span>  ${post.d_goalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-calendar"></span>  ${post.d_term}</p>
 	                                    <a href="postdetail?d_num=${post.d_num}">View more</a>
 	                            </figcaption>
 	                        </figure>
@@ -114,10 +114,10 @@
 		                        	<figure class="effect-oscar">
 		                            <img src="resources/images/home-images/image-4.jpg" alt="" class="img-responsive"/>
 		                            <figcaption>
-		                                    <h2>${nextVal.d_name}</h2>
-		                                    <p>${nextVal.d_totalMoney}</p>
-		                                    <p>${nextVal.d_goalMoney}</p>
-		                                    <p>${nextVal.d_term}</p>
+		                                    <h2><span>${nextVal.d_name}</span></h2>
+										<p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-flag"></span>  ${nextVal.d_goalMoney}</p>	
+	                                    <p><span class="glyphicon glyphicon-calendar"></span>  ${nextVal.d_term}</p>
 		                                <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 		                            </figcaption>
 		                        </figure>
@@ -139,10 +139,10 @@
 	                        	 -->
 	                            <img src="resources/images/home-images/image-3.jpg" alt="" class="img-responsive"/>
 	                            <figcaption>
-	                                    <h2>${nextVal.d_name}</h2>
-	                                    <p>${nextVal.d_totalMoney}</p>
-	                                    <p>${nextVal.d_goalMoney}</p>
-	                                    <p>${nextVal.d_term}</p>
+	                                    <h2><span>${nextVal.d_name}</span></h2>
+										<p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-flag"></span>  ${nextVal.d_goalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-calendar"></span>  ${nextVal.d_term}</p>
 	                                    <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 	                            </figcaption>
 	                        </figure>
@@ -154,10 +154,10 @@
 		                        	<figure class="effect-oscar">
 		                            <img src="resources/images/home-images/image-5.jpg" alt="" class="img-responsive"/>
 		                            <figcaption>
-		                                    <h2>${nextVal.d_name}</h2>
-		                                    <p>${nextVal.d_totalMoney}</p>
-		                                    <p>${nextVal.d_goalMoney}</p>
-		                                    <p>${nextVal.d_term}</p>
+		                                    <h2><span>${nextVal.d_name}</span></h2>
+	                                    <p><span class="glyphicon glyphicon-piggy-bank"></span>  ${nextVal.d_totalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-flag"></span>  ${nextVal.d_goalMoney}</p>
+	                                    <p><span class="glyphicon glyphicon-calendar"></span>  ${nextVal.d_term}</p>
 		                                <a href="postdetail?d_num=${nextVal.d_num}">View more</a>
 		                            </figcaption>
 		                        </figure>
