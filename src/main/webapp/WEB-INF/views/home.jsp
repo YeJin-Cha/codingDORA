@@ -42,13 +42,13 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="/codingdora" title="codingDARA funding"><img style="width: 150px;" src="resources/images/logo.png" title="codingDORA" alt="codingDORA"/></a>
+                        	<a href="/codingdora" title="codingDORA funding"><img style="width: 150px;" src="resources/images/logo.png" title="codingDORA" alt="codingDORA"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
                     <nav role="header-nav" class="navy">
                         <ul>
-                            <li><a href="my/fundingList" title="My DonationList">My DonationList</a></li>
+                            <li><a href="my/donationList" title="My DonationList">My DonationList</a></li>
                            <!-- 임시 페이지 이동 -->
                            <li><a href="postdetail" title="PostDetail">PostDetail</a></li>
                            <!-- /임시 페이지 이동 -->

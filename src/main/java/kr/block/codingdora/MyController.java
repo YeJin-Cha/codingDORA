@@ -46,12 +46,12 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping(value = "fundingList", method = RequestMethod.GET)
+	@RequestMapping(value = "donationList", method = RequestMethod.GET)
 	public String fundingList(HttpSession session, Model model){
 		logger.info("fundingList");
 		String id = (String) session.getAttribute("userId");
 		ArrayList<DonationVO> list = donationDAO.selectDonationUser(id);
-		model.addAttribute("dlist", list);
+		model.addAttribute("donationList", list);
 		logger.info("donation list! {}"+list);
 		return "blog";
 	}
