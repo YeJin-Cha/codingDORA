@@ -131,9 +131,9 @@
             	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
                 	<article role="pge-title-content">
                     	<header>
-                        	<h2><span>${readPost.d_name}</span>sub title</h2>
+                        	<h2><span>${readPost.d_name}</span></h2>
                         </header>
-                        <p>:: introduce part::</p>
+                        <h2>:: introduce part::</h2>
                     </article>
                 </section>
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -170,7 +170,7 @@
 					<span><i class="fas fa-seedling"></i>   <input type="text" id="changeVal" name="changeVal" disabled="disabled"></span>
                 	
 				</div>
-               	<div class="commentys-form">
+               	<div class="commentys-form" style="position: relative; left: 29rem;">
                		<input type="button" value="Funding" name="">
                	</div>
 			</div>
@@ -178,7 +178,6 @@
   						
 			</article>
           </section>
-				<div class='middle-wrapper'>
   					<div class='like-wrapper'>
     					<a class='like-button'>
       						<span class='like-icon'>
@@ -188,41 +187,9 @@
       						Favorite
     					</a>
   					</div>
-				</div>
   
                 <div class="clearfix"></div>
                 <!-- thumbnails -->
-                	<div class="thumbnails-pan">
-                    	<section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                        	<figure>
-                            	<img src="resources/images/about-images/about-image-1.jpg" class="img-responsive"/>
-                            	<figcaption>
-                                	<h3>John Doe</h3>
-                                    <h5>The designer</h5>
-                                </figcaption>
-                            </figure>
-                        </section>
-                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                        	<figure>
-                            	<img src="resources/images/about-images/about-image-2.jpg" class="img-responsive"/>
-                            	<figcaption>
-                                	<h3>kristy Roan</h3>
-                                    <h5>The Manager</h5>
-                                </figcaption>
-                            </figure>
-                        </section>
-                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                        	<figure>
-                            	<img src="resources/images/about-images/about-image-3.jpg" class="img-responsive"/>
-                            	<figcaption>
-                                	<h3>Jason takas</h3>
-                                    <h5>The Founder</h5>
-                                </figcaption>
-                            </figure>
-                        </section>
-                    </div>
-                <!-- thumbnails -->
-            </div>
             <div class="blog-details">
                 	<article class="post-details" id="post-details">
                         <header role="bog-header" class="bog-header text-center">
@@ -244,7 +211,7 @@
                     
              	<!-- Comments -->
                 <div class="comments-pan">
-                	<h3>3 Comments</h3>
+                	<h3>Comments</h3>
                     <ul class="comments-reply">
                     	<c:forEach var="comment" items="${readComment}">
 	                        <li>

@@ -255,7 +255,7 @@ footer[role="footer"] .copy-right{ text-align:center; display:block; font-size:1
 
 /*===== About ===*/
 
-main[role="main-inner-wrapper"] .about-content{ background-color:#39ac39; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:130px}
+main[role="main-inner-wrapper"] .about-content{ background-color:#39ac39; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px}
 
 main[role="main-inner-wrapper"] .about-content p{ font-size:27px; line-height:30px; color:#FFF; padding-bottom:20px; font-family: 'Slabo 27px', serif;}
 
@@ -397,7 +397,7 @@ article[role="pge-title-content"].contact-header p a:hover{color:#39ac39; text-d
 
 .commentys-form input[type="text"]:focus,.commentys-form input[type="email"]:focus,.commentys-form input[type="url"]:focus,.commentys-form textarea:focus{ border-bottom-color:#000}
 
-.commentys-form input[type="button"]{ padding:0 36px; text-transform:uppercase; display:inline-block; font-size:21px; line-height:60px; color:#FFF; font-weight: bold; text-align:center; border:none; outline:none; background-color:#39ac39; margin-top:50px}
+.commentys-form input[type="button"]{ padding:0 36px; text-transform:uppercase; display:inline-block; font-size:21px; line-height:60px; color:#FFF; font-weight: bold; text-align:center; border:none; outline:none; background-color:#f7e14a; margin-top:50px}
 
 .commentys-form input[type="button"]:hover{ background-color:#ff5c5c}
 
