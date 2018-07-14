@@ -171,7 +171,7 @@
                 	
 				</div>
                	<div class="commentys-form" style="position: relative; left: 29rem;">
-               		<input type="button" value="Funding" name="">
+               		<input type="button" value="Donate" name="">
                	</div>
 			</div>
   						<!-- /rate bar -->
