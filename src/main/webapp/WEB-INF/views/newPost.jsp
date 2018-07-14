@@ -55,6 +55,13 @@ function formCheck(){
     </div>
   </label>
 
+  <label class="text">
+    <span>Wallet Address</span>
+    <div class="input-wrapper">
+      <input type="text" name ="d_targetWallet"> 
+    </div>
+  </label>
+
   <label class="dropdown">
     <span>GoalMoney</span>
     <div class="input-wrapper">
