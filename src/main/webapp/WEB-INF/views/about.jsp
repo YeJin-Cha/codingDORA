@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>:: avana LLC | About ::</title>
+        <title>:: CodingDORA | DonateDetails ::</title>
 		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
         <!-- style -->
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">

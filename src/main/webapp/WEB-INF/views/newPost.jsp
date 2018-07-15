@@ -3,11 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta charset="utf-8">
+        <!-- Description, Keywords and Author -->
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<link href="../resources/css/newPost.css" rel="stylesheet" type="text/css">
- 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>:: codingDORA | New Post ::</title>
+        <title>:: codingDORA | New Post ::</title>
+		<link rel="shortcut icon" href="../resources/images/favicon.ico" type="image/x-icon">
+        <!-- style -->
+        <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+		<link href="../resources/css/newPost.css" rel="stylesheet" type="text/css">
+        <!-- style -->
+        <!-- bootstrap -->
+        <link href="../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- responsive -->
+        <link href="../resources/css/responsive.css" rel="stylesheet" type="text/css">
+        <!-- font-awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link href="../resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- font-awesome -->
+        
+        <script src="../resources/js/jquery-3.2.1.min.js"></script>
+
 <script>
 //폼체크 
 function formCheck(){
@@ -17,7 +35,15 @@ function formCheck(){
 </script>
 </head>
 <body>
-
+<header role="header" style="height: 10rem;">
+            	<div class="container" style="position: relative; top: -6rem;">
+                	<!-- logo -->
+                    	<h1>
+                        	<a href="index.html" title="avana LLC"><img src="../resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        </h1>
+                    <!-- logo -->
+                </div>
+            </header>
 <form action="insertPost" method="post" onsubmit="return formCheck();">
 <div id="form" class="form-wrapper">
   <label class="text">
@@ -100,7 +126,6 @@ function formCheck(){
       </label>
     </div>
   </fieldset>
-  
     <input type="submit" name="submit" value="Submit"/>
     <input type="reset" name="reset" value="Reset"/>
 
@@ -109,8 +134,13 @@ function formCheck(){
 </div>  
 
 </form>
+
 </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="../resources/js/jquery.min.js" type="text/javascript"></script>
+        <!-- custom -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <!-- jquery.countdown -->
 <script type="text/javascript">
 /* JS is only for label klick on iPad & theming, so you won't need any JS for you homepage (except the iPad part) */
 
