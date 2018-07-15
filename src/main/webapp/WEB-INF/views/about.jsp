@@ -141,7 +141,17 @@
                 		<p>${readPost.d_term}</p>
                         
                         <!-- rate bar -->
-                        <div id="goal"><i class="fab fa-ethereum"></i>  ${readPost.d_goalMoney}</div>
+                        <div id="goal">
+                        
+                        <c:if test="${readPost.d_num == 1}">
+	                        <i class="fab fa-ethereum"></i>
+                        </c:if>
+						<c:if test="${readPost.d_num == 3}">
+							<i class="fas fa-seedling"></i>
+						</c:if>		
+
+
+						${readPost.d_goalMoney}</div>
   						<div id="glass">
     						<div id="progress"><i class="fab fa-ethereum"></i>   ${readPost.d_totalMoney}</div>
     						
