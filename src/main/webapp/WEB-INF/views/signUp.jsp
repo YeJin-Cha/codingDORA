@@ -3,12 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-<link href="resources/css/signUp.css" rel="stylesheet" type="text/css">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>:: CodingDORA | SignUp ::</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta charset="utf-8">
+        <!-- Description, Keywords and Author -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>:: CodingDORA | SignUp ::</title>
+		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+        <!-- style -->
+		<link href="resources/css/signUp.css" rel="stylesheet" type="text/css">
+        <!-- style -->
+        <!-- bootstrap -->
+        <!-- responsive -->
+        <!-- font-awesome -->
+        <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- font-awesome -->
+        
+        <script src="resources/js/jquery-3.2.1.min.js"></script>
 
-<script src="resources/js/jquery-3.2.1.min.js"></script>
 <script>
 $(document).ready(function () {
    	$('#btn-signin').on('click', checkLoginForm);
@@ -75,6 +88,16 @@ function checkLoginForm() {
 </script>
 </head>
 <body>
+<header role="header" style="height: 5rem;">
+            	<div class="container" style="position: relative; top: -3rem;">
+                	<!-- logo -->
+                    	<h1>
+                        	<a href="index.html" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        </h1>
+                    <!-- logo -->
+                </div>
+            </header>
+
 <div class="container">
   <div class="frame">
     <div class="nav">
@@ -135,7 +158,6 @@ function checkLoginForm() {
         <script src="resources/js/jquery.min.js" type="text/javascript"></script>
         <!-- custom -->
 
-        <script src="resources/js/custom.js" type="text/javascript"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript">
         $(function() {
@@ -159,16 +181,5 @@ function checkLoginForm() {
         	});
         });
 
-/*         $(function() {
-        	$(".btn-signin").click(function() {
-          $(".btn-animate").toggleClass("btn-animate-grow");
-          $(".welcome").toggleClass("welcome-left");
-          $(".cover-photo").toggleClass("cover-photo-down");
-          $(".frame").toggleClass("frame-short");
-          $(".profile-photo").toggleClass("profile-photo-down");
-          $(".btn-goback").toggleClass("btn-goback-up");
-          $(".forgot").toggleClass("forgot-fade");
-        	});
-        }); */
         </script>
 </html>
