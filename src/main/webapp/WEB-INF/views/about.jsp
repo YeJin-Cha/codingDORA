@@ -109,7 +109,7 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="index.html" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="/codingdora" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
@@ -193,7 +193,7 @@
             <div class="blog-details">
                 	<article class="post-details" id="post-details">
                         <header role="bog-header" class="bog-header text-center">
-                            <h3><span>20</span> July 2016</h3>
+                            <!-- <h3><span>20</span> July 2016</h3> -->
                             <h2>Business details</h2>
                             <h4>${readPost.d_introduce}</h4>
                         </header>
@@ -276,7 +276,7 @@
         <footer role="footer">
             <!-- logo -->
                 <h1>
-                    <a href="index.html" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="/codingdora" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                 </h1>
             <!-- logo -->
             <!-- nav -->
@@ -295,7 +295,7 @@
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
             </ul>
-            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+            <p class="copy-right">&copy; 2018  codingDORA.. All rights Reserved</p>
         </footer>
         <!-- footer -->
     
