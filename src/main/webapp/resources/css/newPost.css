@@ -1,5 +1,8 @@
 @CHARSET "UTF-8";
 .clear {height:0px; clear:both;}
+body {
+  margin:30px;
+}
 fieldset{
 	display: block;
     -webkit-margin-start: 2px;
@@ -14,7 +17,7 @@ fieldset{
 .form-wrapper {
   float:left;
   width:100%;
-  max-width:110.000em;
+  max-width:75.000em;
   background:#FFFFFF;
   overflow:hidden;
 }

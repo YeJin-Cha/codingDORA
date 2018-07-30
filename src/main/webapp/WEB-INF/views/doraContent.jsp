@@ -37,7 +37,7 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="./" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->

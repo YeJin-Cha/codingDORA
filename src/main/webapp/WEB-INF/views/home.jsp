@@ -49,7 +49,6 @@
                     <nav role="header-nav" class="navy">
                         <ul>
                            <!-- 임시 페이지 이동 -->
-                           <!-- <li><a href="postdetail" title="PostDetail">PostDetail</a></li> -->
                            <!-- /임시 페이지 이동 -->
                             <c:if test="${userId != null}">
                             <li><a href="my/donationList" title="My DonationList">My DonationList</a></li>
@@ -178,7 +177,7 @@
 
                 <h1>
 
-                    <a href="/codingdora" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="index.jsp" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
 
                 </h1>
 
@@ -216,7 +215,7 @@
 
             </ul>
 
-            <p class="copy-right">&copy; 2018  codingDORA.. All rights Reserved</p>
+            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
 
         </footer>
 

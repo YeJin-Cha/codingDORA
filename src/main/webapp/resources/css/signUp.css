@@ -4,8 +4,8 @@ html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 body {
   background:
     linear-gradient(
-    rgba(0, 153, 77,0.8),
-    rgba(0, 153, 77,0.8)),
+    rgba(246,247,249,0.8),
+    rgba(246,247,249,0.8)),
   background-size: cover;
 }
 
@@ -50,7 +50,8 @@ body {
 }
 
 .nav-up {
-  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
   opacity: 0;
 }
 
@@ -104,11 +105,14 @@ li {
   padding-left: 37px;
   padding-right: 37px;
   padding-top: 55px;
+  transition: opacity .5s ease, -webkit-transform .5s ease;
   transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
 }
 
 .form-signin-left {
-  transform: translateX(-400px);
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
   opacity: .0;
 }
 
@@ -128,7 +132,8 @@ li {
 }
 
 .form-signup-left {
-  transform: translateX(-399px);
+  -webkit-transform: translateX(-399px);
+          transform: translateX(-399px);
   opacity: 1;
 }
 
@@ -149,7 +154,8 @@ li {
 }
 
 .success-left {
-  transform: translateX(-406px);
+  -webkit-transform: translateX(-406px);
+          transform: translateX(-406px);
   opacity: 1;
 }
 
@@ -372,7 +378,8 @@ a.btn-signup:hover, a.btn-signin:hover {
 }
 
 .forgot-left {
-  transform: translateX(-400px);
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
   opacity: 0;
 }
 
@@ -393,11 +400,14 @@ a.btn-signup:hover, a.btn-signin:hover {
   position: relative;
   color: rgba(35,43,85,0.75);
   opacity: 0;
+  transition: opacity .1s ease 1s, -webkit-transform 1.5s ease .25s;
   transition: transform 1.5s ease .25s, opacity .1s ease 1s;
+  transition: transform 1.5s ease .25s, opacity .1s ease 1s, -webkit-transform 1.5s ease .25s;
 }
 
 .welcome-left {
-  transform: translateY(-780px);
+  -webkit-transform: translateY(-780px);
+          transform: translateY(-780px);
   opacity: 1; 
 }
 
@@ -408,10 +418,8 @@ a.btn-signup:hover, a.btn-signin:hover {
   background:
     linear-gradient(
     rgba(35,43,85,0.75),
-    rgba(35,43,85,0.95)),
-    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/landscape-nature-man-person.jpeg);
-  background-size: cover;
-  opacity: 0;
+    rgba(35,43,85,0.95));
+    opacity: 0;
   transition: all 1.5s ease 0.55s;
 }
 
@@ -427,7 +435,6 @@ a.btn-signup:hover, a.btn-signin:hover {
   border-radius: 70px;
   left: 155px;
   top: -1000px;
-  background: url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/nature-water-rocks-hiking.jpg);
   background-size: 100% 135%;
   background-position: 100% 100%;
   opacity: 0;
@@ -497,12 +504,16 @@ a.btn-goback:hover {
 
 .refreshicon {
     fill: #d3d3d3;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    transition: fill .25s ease, -webkit-transform .25s ease;
     transition: fill .25s ease, transform .25s ease;
+    transition: fill .25s ease, transform .25s ease, -webkit-transform .25s ease;
 }
 
 .refreshicon:hover {
   cursor: pointer;
   fill: #1059FF;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }

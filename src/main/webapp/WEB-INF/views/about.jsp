@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>:: CodingDORA | DonateDetails ::</title>
+        <title>:: avana LLC | About ::</title>
 		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
         <!-- style -->
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
@@ -109,7 +109,7 @@
             	<div class="container">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="/codingdora" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="./" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
                     <!-- logo -->
                     <!-- nav -->
@@ -142,16 +142,15 @@
                         
                         <!-- rate bar -->
                         <div id="goal">
-                        
-                        <c:if test="${readPost.d_num == 1}">
-	                        <i class="fab fa-ethereum"></i>
-                        </c:if>
-						<c:if test="${readPost.d_num == 3}">
-							<i class="fas fa-seedling"></i>
-						</c:if>		
+                        	<c:if test="${readPost.d_num == 1 }">
+	                        	<i class="fab fa-ethereum"></i>
+                        	</c:if>
 
+                        	<c:if test="${readPost.d_num == 3 }">
+	                        	<i class="fas fa-seedling"></i>
+                        	</c:if>
 
-						${readPost.d_goalMoney}</div>
+							${readPost.d_goalMoney}</div>
   						<div id="glass">
     						<div id="progress"><i class="fab fa-ethereum"></i>   ${readPost.d_totalMoney}</div>
     						
@@ -173,16 +172,29 @@
     						<span class="goal-label" id="hachi"><i class="fab fa-ethereum"></i>  </span>
   						</div>	
 				<div class="d_info">
+				<c:if test="${readPost.d_num == 1 }">
 					<span>if you donate</span>
 					<span><i class="fab fa-ethereum"></i>   <input type="text" id="fundingVal" name="fundingVal" placeholder="ex) 100"></span>
 				
+					<h3 ></h3>
 					<span>you can get</span>
 					<span><i class="fas fa-seedling"></i>   <input type="text" id="changeVal" name="changeVal" disabled="disabled"></span>
-                	
+                </c:if>
+                <c:if test="${readPost.d_num == 3 }">
+                	<span>if you funding</span>
+					<span><i class="fas fa-seedling"></i>   <input type="text" id="fundingVal" name="fundingVal" placeholder="ex) 100"></span>
+                </c:if>
 				</div>
+				<c:if test="${readPost.d_num == 1 }">
                	<div class="commentys-form" style="position: relative; left: 29rem;">
                		<input type="button" value="Donate" name="">
                	</div>
+               	</c:if>
+               	<c:if test="${readPost.d_num == 3 }">
+               	<div class="commentys-form" style="position: relative; left: 29rem;">
+               		<input type="button" value="Funding" name="">
+               		</div>
+               	</c:if>
 			</div>
   						<!-- /rate bar -->
   						
@@ -203,7 +215,7 @@
             <div class="blog-details">
                 	<article class="post-details" id="post-details">
                         <header role="bog-header" class="bog-header text-center">
-                            <!-- <h3><span>20</span> July 2016</h3> -->
+                            <h3><span>20</span> July 2016</h3>
                             <h2>Business details</h2>
                             <h4>${readPost.d_introduce}</h4>
                         </header>
@@ -286,7 +298,7 @@
         <footer role="footer">
             <!-- logo -->
                 <h1>
-                    <a href="/codingdora" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                    <a href="./" title="avana LLC"><img src="resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                 </h1>
             <!-- logo -->
             <!-- nav -->
@@ -298,18 +310,18 @@
                     <li><a href="contact.html" title="Contact">Contact</a></li>
                 </ul>
             </nav>
-            
-          	<!-- nav -->
+            <!-- nav -->
             <ul role="social-icons">
             	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
             </ul>
-            <p class="copy-right">&copy; 2018  codingDORA.. All rights Reserved</p>
+            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
         </footer>
         <!-- footer -->
     
+    	
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="resources/js/jquery.min.js" type="text/javascript"></script>
@@ -333,6 +345,256 @@
     	$('a.like-button').on('click', function() {
     		  $(this).toggleClass('liked');
     		});
+    	</script>
+    	
+    	<script type="text/javascript">
+    	 var baseBlock;
+         var greenToken;
+         var accounts;
+         var currentAccount;
+         var logs = [];
+         
+         var selectorNames = document.getElementById("sel_names");
+         var selectorTransferToNames = document.getElementById("sel_transfer_to_names");
+         var selectorApproveToNames = document.getElementById("sel_approve_to_names");
+         var selectorTransferFromNames = document.getElementById("sel_transfer_from_names");
+         var selectorTransferFromToNames = document.getElementById("sel_transfer_from_to_names");
+         var selectorEthTransferToNames = document.getElementById("sel_eth_transfer_to_names");
+         
+         var accountNames= ['일지매', '이더리움', '삼겹살', '사피엔스', '오마이걸', '육룡이나르샤', '칠공주', '팔도비빔면', '구글', '십만양병설'];
+
+         const GreenTokenABI= [
+        		{
+        			"anonymous": false,
+        			"inputs": [
+        				{
+        					"indexed": true,
+        					"name": "previousOwner",
+        					"type": "address"
+        				},
+        				{
+        					"indexed": true,
+        					"name": "newOwner",
+        					"type": "address"
+        				}
+        			],
+        			"name": "OwnershipTransferred",
+        			"type": "event"
+        		},
+        		{
+        			"constant": false,
+        			"inputs": [
+        				{
+        					"name": "_beneficiary",
+        					"type": "address"
+        				}
+        			],
+        			"name": "buyTokens",
+        			"outputs": [],
+        			"payable": true,
+        			"stateMutability": "payable",
+        			"type": "function"
+        		},
+        		{
+        			"constant": false,
+        			"inputs": [],
+        			"name": "renounceOwnership",
+        			"outputs": [],
+        			"payable": false,
+        			"stateMutability": "nonpayable",
+        			"type": "function"
+        		},
+        		{
+        			"constant": false,
+        			"inputs": [
+        				{
+        					"name": "_rate",
+        					"type": "uint256"
+        				}
+        			],
+        			"name": "setRate",
+        			"outputs": [],
+        			"payable": false,
+        			"stateMutability": "nonpayable",
+        			"type": "function"
+        		},
+        		{
+        			"constant": false,
+        			"inputs": [
+        				{
+        					"name": "_newOwner",
+        					"type": "address"
+        				}
+        			],
+        			"name": "transferOwnership",
+        			"outputs": [],
+        			"payable": false,
+        			"stateMutability": "nonpayable",
+        			"type": "function"
+        		},
+        		{
+        			"anonymous": false,
+        			"inputs": [
+        				{
+        					"indexed": true,
+        					"name": "previousOwner",
+        					"type": "address"
+        				}
+        			],
+        			"name": "OwnershipRenounced",
+        			"type": "event"
+        		},
+        		{
+        			"anonymous": false,
+        			"inputs": [
+        				{
+        					"indexed": true,
+        					"name": "purchaser",
+        					"type": "address"
+        				},
+        				{
+        					"indexed": true,
+        					"name": "beneficiary",
+        					"type": "address"
+        				},
+        				{
+        					"indexed": false,
+        					"name": "value",
+        					"type": "uint256"
+        				},
+        				{
+        					"indexed": false,
+        					"name": "amount",
+        					"type": "uint256"
+        				}
+        			],
+        			"name": "TokenPurchase",
+        			"type": "event"
+        		},
+        		{
+        			"payable": true,
+        			"stateMutability": "payable",
+        			"type": "fallback"
+        		},
+        		{
+        			"inputs": [
+        				{
+        					"name": "_rate",
+        					"type": "uint256"
+        				},
+        				{
+        					"name": "_wallet",
+        					"type": "address"
+        				},
+        				{
+        					"name": "_token",
+        					"type": "address"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "nonpayable",
+        			"type": "constructor"
+        		},
+        		{
+        			"constant": true,
+        			"inputs": [],
+        			"name": "owner",
+        			"outputs": [
+        				{
+        					"name": "",
+        					"type": "address"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "view",
+        			"type": "function"
+        		},
+        		{
+        			"constant": true,
+        			"inputs": [],
+        			"name": "rate",
+        			"outputs": [
+        				{
+        					"name": "",
+        					"type": "uint256"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "view",
+        			"type": "function"
+        		},
+        		{
+        			"constant": true,
+        			"inputs": [],
+        			"name": "token",
+        			"outputs": [
+        				{
+        					"name": "",
+        					"type": "address"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "view",
+        			"type": "function"
+        		},
+        		{
+        			"constant": true,
+        			"inputs": [],
+        			"name": "wallet",
+        			"outputs": [
+        				{
+        					"name": "",
+        					"type": "address"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "view",
+        			"type": "function"
+        		},
+        		{
+        			"constant": true,
+        			"inputs": [],
+        			"name": "weiRaised",
+        			"outputs": [
+        				{
+        					"name": "",
+        					"type": "uint256"
+        				}
+        			],
+        			"payable": false,
+        			"stateMutability": "view",
+        			"type": "function"
+        		}
+        	];
+         window.addEventListener('load', function() {
+
+             if (typeof window.web3 !== "undefined") {
+              web3js = new Web3(window.web3.currentProvider);
+              console.log("Connect to Mist/MetaMask");
+           } else {      
+
+              web3js = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+              console.log("Connect to Localhost");
+              }
+           
+           web3js.eth.getBlockNumber(function(error, result) {
+              if (error != null) {
+                 document.getElementById("current_account").textContent = "접속 ERROR : 블록 정보를 가져올 수 없습니다.";
+                 baseBlock = -1;
+                 accounts = null;
+              }
+              else {
+                 baseBlock = result;
+                 web3js.eth.getAccounts(function(error, result) {
+                    if (error != null) {
+                       document.getElementById("current_account").textContent = "접속 ERROR : 계정 정보를 가져올 수 없습니다.";
+                       accounts = null;                     
+                    } else {
+                       accounts = result;
+                       console.log(accounts);
+                       greenToken = web3js.eth.contract(GreenTokenABI).at("0x22fcc04e48f4ea2437bea4f5f29d4229a9124884");
+    	
+    	
     	</script>
     	
     </body>

@@ -39,7 +39,7 @@ function formCheck(){
             	<div class="container" style="position: relative; top: -6rem;">
                 	<!-- logo -->
                     	<h1>
-                        	<a href="index.html" title="avana LLC"><img src="../resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="./" title="avana LLC"><img src="../resources/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
                         </h1>
                     <!-- logo -->
                 </div>
